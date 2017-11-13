@@ -1,0 +1,57 @@
+﻿@using Team404_v2.Models;
+@model StorageDevicesVM
+
+@{
+    ViewBag.PageTitle = "Storage Devices";
+    ViewBag.PageName = "Storage Devices";
+}
+
+
+
+@foreach (var SD in Model.StorageDevicesItems)
+{
+    <div class="item">
+        <h4>@SD.ItemTitle</h4>
+        <h2>@SD.ItemPrice</h2>
+        <div class="minidescription">
+            <ul>
+                @foreach (var bp in SD.MiniDescription)
+                {
+                    <li>@bp</li>
+                }
+            </ul>
+            <button class="Link"> @SD.ItemLink </button>
+        </div>
+    </div>
+	<div id="hidden">
+		<p><b>Feature Summary</b></p>
+		<div id="long">
+			<ul>
+				@foreach (var more in SD.LongDescription)
+				{
+					<li>@more</li>
+				}
+			</ul>
+			<button type="button" id="Wishlist">@SD.Wishlist</button>
+			<button type="button" id="Remove">@SD.RemoveDetails</button>
+		</div>
+		<table id="pricetable">
+			<tr>
+				<th id="colname">Online Retailer</th>
+				<th id="colname">Price</th>
+			</tr>
+			<tr>
+				<td id="box">
+					<a href="#" target="_blank">
+						@SD.Price1Name
+					</a>
+				</td>
+				<td id="box">$@SD.ItemPrice</td>
+			</tr>
+			<tr>
+				<td id="box"><a href="#" target="_blank"></a>@SD.Price2Name</td>
+				<td id="box">$@SD.ItemPrice2</td>
+			</tr>
+		</table>
+	</div>
+}

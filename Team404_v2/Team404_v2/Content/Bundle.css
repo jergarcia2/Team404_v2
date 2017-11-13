@@ -1,0 +1,54 @@
+﻿#bundletable {
+	border-collapse: collapse;
+	margin-left: 190px;
+	font-size: 15px;
+}
+
+#colname, #box {
+	border: 1px solid;
+	padding: 10px;
+}
+
+
+
+#Remove {
+	background-color: grey;
+	color: black;
+	float: right;
+	margin-top: 80px;
+	margin-right: -100px;
+}
+
+
+#Link {
+	background-color: grey;
+	color: black;
+	float: right;
+	margin-top: -45px;
+}
+
+
+#Wishlist {
+	background-color: grey;
+	color: black;
+	float: right;
+	margin-top: 10px;
+}
+
+#minidescription2 {
+	margin-bottom: -15px;
+}
+
+
+.itemimages {
+	float: left;
+	padding-right: 50px;
+}
+
+#hidden {
+	display: none;
+}
+
+#long {
+	padding-left: 190px;
+}

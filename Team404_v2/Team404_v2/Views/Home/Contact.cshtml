@@ -1,0 +1,49 @@
+﻿@{
+	ViewData["PageTitle"] = "Contact Us";
+	ViewData["PageName"] = "Contact";
+}
+@section css {
+	<link href="~/Content/ContactCSS.css" rel="stylesheet" type="text/css" />
+}
+
+<h3>Feedback Form</h3>
+
+@if (ViewBag.HasErrors == true)
+{
+    <h4 style="background-color: darkred; color: white display: block">Oh no!</h4>
+    <ul>
+      <li>@ViewBag.ErrorText</li>
+    </ul>
+}
+
+<form method="post" action="~/Home/Contact" id="feedback_form">
+	<label for="contact_name">Name:</label>
+	<input type="text" name="ContactName" id="contact_name" placeholder="Your Name..." maxlength="50" value="@(ViewBag.FormModel?.ContactName)" required>
+	<label for="contact_email">Email Address:</label>
+	<input type="email" name="ContactEmail" id="contact_email" placeholder="Your Email Address..." maxlength="50" value="@(ViewBag.FormModel?.ContactEmail)" required>
+	<label for="contact_phone">Phone Number:</label>
+	<input type="tel" name="ContactPhone" id="contact_phone" placeholder="Your Phone Number..." maxlength="50" value="@(ViewBag.FormModel?.ContactPhone)" required>
+	<label for="contact_purpose">Purpose:</label>
+	<select size="1" name="ContactPurpose" id="contact_purpose">
+		<option value="">Please Select a Purpose</option>
+        <!--TODO: @(ViewBag.FormModel?.ContactPurpose == "comment" ? " selected" : "") -->
+		<option value="comment" @(ViewBag.FormModel?.ContactPurpose == "comment" ? " selected" : "") >Site Comment</option>
+		<option value="question" @(ViewBag.FormModel?.ContactPurpose == "question" ? " selected" : "")>General Question</option>
+		<option value="employment" @(ViewBag.FormModel?.ContactPurpose == "employment" ? " selected" : "")>Employment Opportunity</option>
+		<option value="message" @(ViewBag.FormModel?.ContactPurpose == "message" ? " selected" : "")>Personal Message</option>
+	</select>
+	<label for="contact_message">Message:</label>
+	<textarea name="ContactMessage" id="contact_message" placeholder="Your message comments here...">@(ViewBag.FormModel?.ContactMessage)</textarea>
+	<input type="submit" value="Submit" id="feedbacksubmit">
+</form>
+<address>
+	One Microsoft Way<br />
+	Redmond, WA 98052-6399<br />
+	<abbr title="Phone">P:</abbr>
+	425.555.0100
+</address>
+<address>
+	<strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+	<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+

@@ -1,0 +1,72 @@
+﻿@using Team404_v2.Models;
+@model ProfessionalVM
+@{
+    ViewBag.PageTitle = "Professional Bundles";
+    ViewBag.PageName = "Professional Bundles";
+}
+@section css {
+	<link href="~/Content/Bundle.css" rel="stylesheet" type="text/css" />
+
+}
+@foreach (var pb in Model.ProfessionalItems)
+{
+	<div class="item">
+		<img class="itemimages" src="~/images/bundleimages/bundle1.jpg" height="200" width="180">
+		<h4>@pb.BundleTitle</h4>
+		<h2>$@pb.BundlePrice</h2>
+		<br>
+		<h4> Products in Bundle:</h4>
+		<div class="minidescription2">
+			<ul>
+				<li>@pb.ProductName1</li>
+				<li>@pb.ProductName2</li>
+				<li>@pb.ProductName3</li>
+			</ul>
+			<button type="button" id="Link">@pb.BundleLink</button>
+		</div>
+	</div>
+
+	<div id="hidden">
+		<p><b>Feature Summaries</b></p>
+
+		<button type="button" id="Wishlist">@pb.Wishlist</button>
+		<button type="button" id="Remove">@pb.RemoveDetails</button>
+
+		<table id="bundletable">
+			<tr>
+				<th id="colname">@pb.ProductName1</th>
+				<th id="colname">@pb.ProductName2</th>
+				<th id="colname">@pb.ProductName3</th>
+			</tr>
+			<tr>
+				<td id="box">
+
+					<ul>
+						@foreach (var more in pb.MiniDescription1)
+						{
+							<li>@more</li>
+						}
+					</ul>
+				</td>
+				<td id="box">
+					<ul>
+						@foreach (var more in pb.MiniDescription2)
+						{
+							<li>@more</li>
+						}
+					</ul>
+				</td>
+				<td id="box">
+					<ul>
+						@foreach (var more in pb.MiniDescription3)
+						{
+							<li>@more</li>
+						}
+					</ul>
+				</td>
+
+			</tr>
+
+		</table>
+	</div>
+}

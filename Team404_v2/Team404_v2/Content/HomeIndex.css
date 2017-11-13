@@ -1,0 +1,21 @@
+﻿.homelogodiv {
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.logocombo2 {
+    padding-top: 50px;
+    margin:auto;
+    padding-left: 75px;
+}
+
+.logocombo1 {
+    margin: auto;
+    padding-left: 65px;
+}
+
+p {
+    padding-top: 15px;
+}

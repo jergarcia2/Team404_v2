@@ -1,0 +1,134 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*None default inputed code*/
+
+#pricetable {
+    border-collapse: collapse;
+    margin-left: 190px;
+    font-size: 15px;
+}
+
+#colname, #box {
+    border: 1px solid;
+    padding: 10px;
+}
+
+#Remove {
+    background-color: grey;
+    color: black;
+    float: right;
+    margin-top: -45px;
+}
+
+#Link {
+    background-color: grey;
+    color: black;
+    float: right;
+    margin-top: -45px;
+}
+
+/* CSS for Items on all Pages */
+.itemimages {
+    float: left;
+}
+
+#hidden {
+    display: none;
+}
+
+#long {
+    padding-left: 190px;
+}
+
+.minidescription {
+    list-style-position: inside;
+    margin-top: 25px;
+}
+
+.titlebar {
+    text-align: center;
+}
+
+/* Nav Bar adjustment */
+#topnav {
+    margin: 0px;
+    position: relative;
+    padding-left: 5px;
+}
+.navbar-brand {
+    padding: 0px;
+    margin: -10px;
+}
+
+.navbar-brand > img {
+    padding: 15px;
+    width: auto;
+}
+
+#navlogo{
+    height:70px;
+}
+
+#navtitle {
+    height: 50px;
+    padding-left: 5px;
+}
+
+.navbar-form {
+    padding-right: 5px;
+}
+
+#login-links {
+    padding-right: 9px;
+}
+
+.sidenavmain {
+    float: right;
+    margin-right: 5px;
+}
+
+footer {
+    padding-top: 30px;
+}

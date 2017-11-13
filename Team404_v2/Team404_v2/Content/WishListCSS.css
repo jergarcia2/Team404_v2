@@ -1,0 +1,40 @@
+﻿#Wishlist {
+    background-color: grey;
+    color: black;
+    float: right;
+    margin-top: -160px;
+}
+
+#colname, #box {
+	border: 1px solid;
+	padding: 10px;
+}
+
+#Remove {
+	background-color: grey;
+	color: black;
+	float: right;
+	margin-top: -45px;
+}
+
+
+#Link {
+	background-color: grey;
+	color: black;
+	float: right;
+	margin-top: -45px;
+}
+
+#Delete, #Undo {
+	background-color: grey;
+	color: black;
+}
+
+#divide {
+	width: 5px;
+	display: inline-block;
+}
+#wishtable {
+	width: 80%;
+	text-align: center;
+}

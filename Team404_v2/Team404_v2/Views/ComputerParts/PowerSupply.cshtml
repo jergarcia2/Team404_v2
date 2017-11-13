@@ -1,0 +1,56 @@
+﻿@using Team404_v2.Models;
+@model PowerSupplyVM
+
+@{
+    ViewBag.PageTitle = "Power Supply";
+    ViewBag.PageName = "Power Supply";
+}
+
+
+@foreach (var PS in Model.PowerSupplyItems)
+{
+    <div class="item">
+        <h4>@PS.ItemTitle</h4>
+        <h2>@PS.ItemPrice</h2>
+        <div class="minidescription">
+            <ul>
+                @foreach (var bp in PS.MiniDescription)
+                {
+                    <li>@bp</li>
+                }
+            </ul>
+            <button class="Link"> @PS.ItemLink </button>
+        </div>
+    </div>
+	<div id="hidden">
+		<p><b>Feature Summary</b></p>
+		<div id="long">
+			<ul>
+				@foreach (var more in PS.LongDescription)
+				{
+					<li>@more</li>
+				}
+			</ul>
+			<button type="button" id="Wishlist">@PS.Wishlist</button>
+			<button type="button" id="Remove">@PS.RemoveDetails</button>
+		</div>
+		<table id="pricetable">
+			<tr>
+				<th id="colname">Online Retailer</th>
+				<th id="colname">Price</th>
+			</tr>
+			<tr>
+				<td id="box">
+					<a href="#" target="_blank">
+						@PS.Price1Name
+					</a>
+				</td>
+				<td id="box">$@PS.ItemPrice</td>
+			</tr>
+			<tr>
+				<td id="box"><a href="#" target="_blank"></a>@PS.Price2Name</td>
+				<td id="box">$@PS.ItemPrice2</td>
+			</tr>
+		</table>
+	</div>
+}

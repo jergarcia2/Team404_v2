@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Team 404</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("css", required: false)
+    <script src="~/Scripts/Details.js"></script> <!-- Show/Hide Details on views-->
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container-fluid" id="topnav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">1</span>
+                    <span class="icon-bar">2</span>
+                    <span class="icon-bar">3</span>
+                </button>
+                @*@Html.ActionLink("Team404", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <img src="~/Content/images/siteimages/Logo2-navmain.png" alt="navlogo" title="navlogo" id="navlogo"/>
+                    <img src="~/Content/images/siteimages/LogoName-navbar.png" alt="Logo Name" title="navtitle" id="navtitle" />
+                    @*<ul class="nav navbar-brand navlogocombo">
+                        <li><img src="~/Content/images/siteimages/Logo2-navmain.png" alt="navlogo" title="navlogo" id="navlogo" height="50" width="50" /></li>
+                        <li><img src="~/Content/images/siteimages/LogoName-navbar.png" alt="Logo Name" title="navtitle" id="navtitle" height="30" /></li>
+                    </ul>*@
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-right" id="login-links">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
+        </div>
+        <!-- Main Navi Start -->
+        <div class="container-fluid" id="lownav">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                    <!-- Computer Parts Nav Start-->
+                    <li class="dropdown">
+                        <a asp-area="" asp-controller="ComputerParts" asp-action="Index" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button">Computer Parts<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="~/ComputerParts/Cases">Cases</a></li>
+                            <li><a href="~/ComputerParts/Processors">Processors</a></li>
+                            <li role="separator" class="divider"></li> <!-- Optional Divider -->
+                            <li><a href="~/ComputerParts/Motherboards">Motherboards</a></li>
+                            <li><a href="~/ComputerParts/Memory">Memory</a></li>
+                            <li><a href="~/ComputerParts/CoolingSystems">Cooling Systems</a></li>
+                            <li><a href="~/ComputerParts/SoundCards">Sound Cards</a></li>
+                            <li><a href="~/ComputerParts/VideoCards">Video Cards</a></li>
+                            <li><a href="~/ComputerParts/PowerSupply">Power Supply</a></li>
+                        </ul>
+                    </li>
+                    <!-- CP Nav End -->    
+
+                    <!-- Accessories Nav Start -->
+                    <li class="dropdown">
+                        <a asp-area="" asp-controller="Accessories" asp-action="Index" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accessories<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Accessories/Chargers">Chargers</a></li>
+                            <li><a href="~/Accessories/Adapter">Adapter</a></li>
+                            <li><a href="~/Accessories/MiscCables">Misc. Cables</a></li>
+                            <li><a href="~/Accessories/HeadPhones">Head Phones</a></li>
+                            <li><a href="~/Accessories/StorageDevices">Storage Devices</a></li>
+                        </ul>
+                    </li>
+                    <!-- Accessories Nav End -->
+
+                    <!-- Bundles Nav Start -->
+                    <li class="dropdown">
+                        <a asp-area="" asp-controller="Bundles" asp-action="Index" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bundles<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Bundles/Beginner">Beginner</a></li>
+                            <li><a href="~/Bundles/MidGrade">Mid-Grade</a></li>
+                            <li><a href="~/Bundles/Professional">Professional</a></li>
+                        </ul>
+                    </li>
+                    <!-- Bundles Nav End -->
+                </ul><!-- End Dropdown Navs-->
+                <form class="navbar-form pull-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div><!-- Main nav container-->
+        </div>
+        <!-- Main Nav End -->
+    </div>
+    <!-- Body Start -->
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12" id="titlebar">
+                <h1>@ViewBag.PageTitle</h1>
+            </div>
+        </div>
+        @RenderBody()
+        <!-- Only use below if we contruct a filter nav on the left -->
+        <div class="row">
+            <div class="col-md-2" id="filternav">
+                <h2>@ViewBag.SideBarTitle</h2>
+                <!-- TODO: Construct filter nav maybe? -->
+            </div>
+            <div class="col-md-10" id="maincontent">
+                <!--<h2>@ViewBag.PageName</h2>-->
+                <!-- TODO: Move RenderBody here -->
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer" id="sitemap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="">
+                    <p>&copy; @DateTime.Now.Year - Team 404 (Amber, Mario, Bri, Jeremy)</p>
+                </div>
+                <div class="social-section col-md-6">
+                    <ul>
+                        <li><a class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"> </i></a></li>
+                        <li><a class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"> </i></a></li>
+                        <li><a class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
+                        <li><a class="btn-floating btn-sm btn-li"><i class="fa fa-linkedin"> </i></a></li>
+                        <li><a class="btn-floating btn-sm btn-dribbble"><i class="fa fa-dribbble"> </i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Body End -->
+    @*<div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Team404 (Amber, Mario, Bri, Jeremy)</p>
+        </footer>
+    </div>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

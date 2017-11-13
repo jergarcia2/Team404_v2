@@ -1,0 +1,42 @@
+﻿@using Team404_v2.Models;
+@model WishlistVM
+@{
+	ViewBag.PageTitle = "WishList";
+}
+@section css {
+    <link href="~/css/WishListCSS.css" rel="stylesheet" type="text/css">
+}
+<table id="wishtable">
+	<tr>
+		<th id="colname">Product Name</th>
+		<th id="colname">Price 1</th>
+		<th id="colname">Price 2</th>
+		<th id="colname">Price 3</th>
+		<th id="colname">Action</th>
+	</tr>
+	@foreach (var SC in Model.ListItems)
+	{
+		<tr>
+			<td id="box">@SC.ItemNames</td>
+			<td id="box">$@SC.Prices1</td>
+			<td id="box">$@SC.Prices2</td>
+			<td id="box">$@SC.Prices3</td>
+
+			<td>
+				<button type="button" id="Delete">@SC.LinkRemove</button>
+				<div id="divide"></div>
+				<button type="button" id="Undo">@SC.Undo</button>
+			</td>
+
+		</tr>
+
+	}
+</table>
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+﻿@using Team404_v2.Models;
+@model MiscCablesVM
+
+@{
+    ViewBag.PageTitle = "Misc. Cables";
+    ViewBag.PageName = "Misc. Cables";
+}
+
+
+
+@foreach (var MC in Model.MiscCableItems)
+{
+    <div class="item">
+        <h4>@MC.ItemTitle</h4>
+        <h2>@MC.ItemPrice</h2>
+        <div class="minidescription">
+            <ul>
+                @foreach (var bp in MC.MiniDescription)
+                {
+                    <li>@bp</li>
+                }
+            </ul>
+            <button class="Link"> @MC.ItemLink </button>
+        </div>
+    </div>
+	<div id="hidden">
+		<p><b>Feature Summary</b></p>
+		<div id="long">
+			<ul>
+				@foreach (var more in MC.LongDescription)
+				{
+					<li>@more</li>
+				}
+			</ul>
+			<button type="button" id="Wishlist">@MC.Wishlist</button>
+			<button type="button" id="Remove">@MC.RemoveDetails</button>
+		</div>
+		<table id="pricetable">
+			<tr>
+				<th id="colname">Online Retailer</th>
+				<th id="colname">Price</th>
+			</tr>
+			<tr>
+				<td id="box">
+					<a href="#" target="_blank">
+						@MC.Price1Name
+					</a>
+				</td>
+				<td id="box">$@MC.ItemPrice</td>
+			</tr>
+			<tr>
+				<td id="box"><a href="#" target="_blank"></a>@MC.Price2Name</td>
+				<td id="box">$@MC.ItemPrice2</td>
+			</tr>
+		</table>
+	</div>
+}

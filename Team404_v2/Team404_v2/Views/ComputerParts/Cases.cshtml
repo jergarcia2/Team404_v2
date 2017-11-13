@@ -1,0 +1,59 @@
+﻿@using Team404_v2.Models;
+@model CasesVM
+
+@{
+    ViewBag.PageTitle = "Cases";
+    ViewBag.PageName = "Cases";
+}
+@section scripts {
+    <link href="~/Scripts/Details.js" rel="stylesheet" type="text/javascript"/>
+}
+
+@foreach (var cpcase in Model.CasesItems)
+{
+    <div class="item">
+		<img class="itemimages" src="~/Content/images/computerpartsimages/Item1image.png" height="200" width="180">
+        <h4>@cpcase.ItemTitle</h4>
+        <h2>$@cpcase.ItemPrice</h2>
+        <div class="minidescription">
+            <ul>
+                @foreach (var bp in cpcase.MiniDescription)
+                {
+                    <li>@bp</li>
+                }
+            </ul>
+		
+            <button type="button" id="Link">@cpcase.ItemLink</button>
+        </div>
+    </div>
+
+	<div id="hidden">
+		<p><b>Feature Summary</b></p>
+		<div id="long">
+			<ul>
+				@foreach (var more in cpcase.LongDescription)
+				{ 
+					<li>@more</li>
+				}
+			</ul>
+			<button type="button" id="Wishlist">@cpcase.Wishlist</button>
+			<button type="button" id="Remove">@cpcase.RemoveDetails</button>
+		</div>
+		<table id="pricetable">
+			<tr>
+				<th id="colname">Online Retailer</th>
+				<th id="colname">Price</th>
+			</tr>
+			<tr>
+				<td id="box">
+				<a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16811353102" target="_blank"> 
+				@cpcase.Price1Name</a></td>
+				<td id="box">$@cpcase.ItemPrice</td>
+			</tr>
+			<tr>
+				<td id="box"><a href="https://www.amazon.com/DIYPC-Skyline-06-WG-Gaming-Computer-Docking/dp/B01L7QQI1U" target="_blank"></a>@cpcase.Price2Name</td>
+				<td id="box">$@cpcase.ItemPrice2</td>
+			</tr>
+		</table>
+	</div>
+}
