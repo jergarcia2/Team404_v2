@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class MemoryVM
     {
-		public List<CPMemory> MemoryItems { get; set; }
+		public List<CPMemory> CPMemory { get; set; }
 
 		public MemoryVM()
 		{
-			MemoryItems = new List<CPMemory>();
+			CPMemory = new List<CPMemory>();
 		}
 	}
 }

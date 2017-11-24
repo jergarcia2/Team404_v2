@@ -8,11 +8,11 @@ namespace Team404_v2.Models
 {
     public class CasesVM
     {
-		public List<CPCases> CasesItems { get; set; }
+		public List<CPCases> CPCases { get; set; }
 
 		public CasesVM()
 		{
-			CasesItems = new List<CPCases>(); 
+			CPCases = new List<CPCases>(); 
 		}
     }
 }
