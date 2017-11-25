@@ -37,7 +37,13 @@ namespace Team404_v2.Models
 			public virtual DbSet<AMiscCables> AMiscCables { get; set; }
 		public virtual DbSet<APhones> APhones { get; set; }
 		public virtual DbSet<AStorageDevices> AStorageDevices { get; set; }
-		
+
+		//bundles 
+
+		public virtual DbSet<BeginnerBundles> BeginnerBundles { get; set; }
+		public virtual DbSet<MidGradeBundles> MidGradeBundles { get; set; }
+		public virtual DbSet<ProfessionalBundles> ProfessionalBundles { get; set; }
+
 	}
 
 	//public class MyEntity
