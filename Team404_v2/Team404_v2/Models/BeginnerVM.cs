@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class BeginnerVM
     {
-        public List<BeginnerBundles> BeginnerItems { get; set; }
+        public List<BeginnerBundles> BeginnerBundles { get; set; }
 
         public BeginnerVM()
         {
-            BeginnerItems = new List<BeginnerBundles>();
+            BeginnerBundles = new List<BeginnerBundles>();
         }
     }
 }

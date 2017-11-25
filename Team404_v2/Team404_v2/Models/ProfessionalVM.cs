@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class ProfessionalVM
     {
-        public List<ProfessionalBundles> ProfessionalItems { get; set; }
+        public List<ProfessionalBundles> ProfessionalBundles { get; set; }
 
         public ProfessionalVM()
         {
-            ProfessionalItems = new List<ProfessionalBundles>();
+            ProfessionalBundles = new List<ProfessionalBundles>();
         }
     }
 }

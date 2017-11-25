@@ -8,11 +8,11 @@ namespace Team404_v2.Models
 
     public class MidGradeVM
     {
-        public List<MidGradeBundles> MidGradeItems { get; set; }
+        public List<MidGradeBundles> MidGradeBundles { get; set; }
 
         public MidGradeVM()
         {
-            MidGradeItems = new List<MidGradeBundles>();
+            MidGradeBundles = new List<MidGradeBundles>();
         }
     }
 

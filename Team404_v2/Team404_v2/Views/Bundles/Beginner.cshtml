@@ -11,7 +11,7 @@
 }
 
 
-@foreach (var bb in Model.BeginnerItems)
+@foreach (var bb in Model.BeginnerBundles)
 {
 	<div class="item">
 		<img class="itemimages" src="~/Content/images/bundleimages/bundle1.jpg" height="200" width="180">
@@ -45,26 +45,23 @@
 				<td id="box">
 
 					<ul>
-						@foreach (var more in bb.MiniDescription1)
-						{
-							<li>@more</li>
-						}
+						<li>@bb.MiniDescription11</li>
+						<li>@bb.MiniDescription12</li>
+						<li>@bb.MiniDescription13</li>
 					</ul>
 				</td>
 				<td id="box">
 					<ul>
-						@foreach (var more in bb.MiniDescription2)
-						{
-							<li>@more</li>
-						}
+						<li>@bb.MiniDescription21</li>
+						<li>@bb.MiniDescription22</li>
+						<li>@bb.MiniDescription23</li>
 					</ul>
 				</td>
 				<td id="box">
 					<ul>
-						@foreach (var more in bb.MiniDescription3)
-						{
-							<li>@more</li>
-						}
+						<li>@bb.MiniDescription31</li>
+						<li>@bb.MiniDescription32</li>
+						<li>@bb.MiniDescription33</li>
 					</ul>
 				</td>
 

@@ -40,9 +40,9 @@ namespace Team404_v2.Models
 
 		//bundles 
 
-	//	public virtual DbSet<BeginnerBundles> BeginnerBundles { get; set; }
-		//public virtual DbSet<MidGradeBundles> MidGradeBundles { get; set; }
-		//public virtual DbSet<ProfessionalBundles> ProfessionalBundles { get; set; }
+	public virtual DbSet<BeginnerBundles> BeginnerBundles { get; set; }
+	public virtual DbSet<MidGradeBundles> MidGradeBundles { get; set; }
+	public virtual DbSet<ProfessionalBundles> ProfessionalBundles { get; set; }
 
 	}
 

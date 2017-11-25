@@ -8,60 +8,57 @@
 	<link href="~/Content/Bundle.css" rel="stylesheet" type="text/css" />
 
 }
-@foreach (var pb in Model.ProfessionalItems)
+@foreach (var bb in Model.ProfessionalBundles)
 {
 	<div class="item">
-		<img class="itemimages" src="~/images/bundleimages/bundle1.jpg" height="200" width="180">
-		<h4>@pb.BundleTitle</h4>
-		<h2>$@pb.BundlePrice</h2>
+		<img class="itemimages" src="~/Content/images/bundleimages/bundle1.jpg" height="200" width="180">
+		<h4>@bb.BundleTitle</h4>
+		<h2>$@bb.BundlePrice</h2>
 		<br>
 		<h4> Products in Bundle:</h4>
 		<div class="minidescription2">
 			<ul>
-				<li>@pb.ProductName1</li>
-				<li>@pb.ProductName2</li>
-				<li>@pb.ProductName3</li>
+				<li>@bb.ProductName1</li>
+				<li>@bb.ProductName2</li>
+				<li>@bb.ProductName3</li>
 			</ul>
-			<button type="button" id="Link">@pb.BundleLink</button>
+			<button type="button" id="Link">@bb.BundleLink</button>
 		</div>
 	</div>
 
 	<div id="hidden">
 		<p><b>Feature Summaries</b></p>
 
-		<button type="button" id="Wishlist">@pb.Wishlist</button>
-		<button type="button" id="Remove">@pb.RemoveDetails</button>
+		<button type="button" id="Wishlist">@bb.Wishlist</button>
+		<button type="button" id="Remove">@bb.RemoveDetails</button>
 
 		<table id="bundletable">
 			<tr>
-				<th id="colname">@pb.ProductName1</th>
-				<th id="colname">@pb.ProductName2</th>
-				<th id="colname">@pb.ProductName3</th>
+				<th id="colname">@bb.ProductName1</th>
+				<th id="colname">@bb.ProductName2</th>
+				<th id="colname">@bb.ProductName3</th>
 			</tr>
 			<tr>
 				<td id="box">
 
 					<ul>
-						@foreach (var more in pb.MiniDescription1)
-						{
-							<li>@more</li>
-						}
+						<li>@bb.MiniDescription11</li>
+						<li>@bb.MiniDescription12</li>
+						<li>@bb.MiniDescription13</li>
 					</ul>
 				</td>
 				<td id="box">
 					<ul>
-						@foreach (var more in pb.MiniDescription2)
-						{
-							<li>@more</li>
-						}
+						<li>@bb.MiniDescription21</li>
+						<li>@bb.MiniDescription22</li>
+						<li>@bb.MiniDescription23</li>
 					</ul>
 				</td>
 				<td id="box">
 					<ul>
-						@foreach (var more in pb.MiniDescription3)
-						{
-							<li>@more</li>
-						}
+						<li>@bb.MiniDescription31</li>
+						<li>@bb.MiniDescription32</li>
+						<li>@bb.MiniDescription33</li>
 					</ul>
 				</td>
 
