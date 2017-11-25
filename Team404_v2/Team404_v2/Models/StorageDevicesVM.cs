@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class StorageDevicesVM
     {
-		public List<AStorageDevices> StorageDevicesItems { get; set; }
+		public List<AStorageDevices> AStorageDevices { get; set; }
 
 		public StorageDevicesVM()
 		{
-			StorageDevicesItems = new List<AStorageDevices>();
+			AStorageDevices = new List<AStorageDevices>();
 		}
 	}
 }

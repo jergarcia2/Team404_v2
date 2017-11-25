@@ -8,11 +8,11 @@ namespace Team404_v2.Models
     public class VideoCardsVM
     {
 
-		public List<CPVideoCards> VideoCardsItems { get; set; }
+		public List<CPVideoCards> CPVideoCards { get; set; }
 
 		public VideoCardsVM()
 		{
-			VideoCardsItems = new List<CPVideoCards>();
+			CPVideoCards = new List<CPVideoCards>();
 		}
 	}
 }

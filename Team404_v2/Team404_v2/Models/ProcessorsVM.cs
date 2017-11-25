@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class ProcessorsVM
     {
-		public List<CPProcessors> ProcessorsItems { get; set; }
+		public List<CPProcessors> CPProcessors { get; set; }
 
 		public ProcessorsVM()
 		{
-			ProcessorsItems = new List<CPProcessors>();
+			CPProcessors = new List<CPProcessors>();
 		}
 	}
 }

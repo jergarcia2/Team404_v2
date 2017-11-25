@@ -8,11 +8,11 @@ namespace Team404_v2.Models
     public class PowerSupplyVM
     {
 
-		public List<CPPowerSupply> PowerSupplyItems { get; set; }
+		public List<CPPowerSupply> CPPowerSupply { get; set; }
 
 		public PowerSupplyVM()
 		{
-			PowerSupplyItems = new List<CPPowerSupply>();
+			CPPowerSupply = new List<CPPowerSupply>();
 		}
 	}
 }

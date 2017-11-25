@@ -8,11 +8,11 @@ namespace Team404_v2.Models
     public class MotherboardVM
     {
 
-		public List<CPMotherboard> MotherboardItems { get; set; }
+		public List<CPMotherboard> CPMotherboard { get; set; }
 
 		public MotherboardVM()
 		{
-			MotherboardItems = new List<CPMotherboard>();
+			CPMotherboard = new List<CPMotherboard>();
 		}
 	}
 }

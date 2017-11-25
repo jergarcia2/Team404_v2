@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class MiscCablesVM
     {
-		public List<AMiscCables> MiscCableItems { get; set; }
+		public List<AMiscCables> AMiscCables { get; set; }
 
 		public MiscCablesVM()
 		{
-			MiscCableItems = new List<AMiscCables>();
+			AMiscCables = new List<AMiscCables>();
 		}
 	}
 }

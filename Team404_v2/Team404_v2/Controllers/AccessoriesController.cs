@@ -49,7 +49,7 @@ namespace Team404_v2.Controllers
             Item1.MiniDescription.Add("Bullet goes here");
             Item1.MiniDescription.Add("Bullet goes here");
             Item1.MiniDescription.Add("Bullet goes here");
-            model.ChargersItems.Add(Item1);
+            model.AChargers.Add(Item1);
 
             return View(model);
         }
@@ -81,7 +81,7 @@ namespace Team404_v2.Controllers
             Item1.MiniDescription.Add("Bullet goes here");
             Item1.MiniDescription.Add("Bullet goes here");
             Item1.MiniDescription.Add("Bullet goes here");
-            model.MiscCableItems.Add(Item1);
+            model.AMiscCables.Add(Item1);
 
             return View(model);
         }

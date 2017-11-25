@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class ChargersVM
     {
-		public List<AChargers> ChargersItems { get; set; }
+		public List<AChargers> AChargers { get; set; }
 
 		public ChargersVM()
 		{
-			ChargersItems = new List<AChargers>();
+			AChargers = new List<AChargers>();
 		}
 	}
 }

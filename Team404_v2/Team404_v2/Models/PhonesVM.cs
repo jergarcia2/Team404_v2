@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class PhonesVM
     {
-		public List<APhones> PhonesItems { get; set; }
+		public List<APhones> APhones { get; set; }
 
 		public PhonesVM()
 		{
-			 PhonesItems= new List<APhones>();
+			 APhones = new List<APhones>();
 		}
 	}
 }

@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class SoundCardsVM
     {
-		public List<CPSoundCards> SoundCardsItems { get; set; }
+		public List<CPSoundCards> CPSoundCards { get; set; }
 
 		public SoundCardsVM()
 		{
-			SoundCardsItems = new List<CPSoundCards>();
+			CPSoundCards = new List<CPSoundCards>();
 		}
 	}
 }

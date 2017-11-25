@@ -1,8 +1,58 @@
 ﻿@using Team404_v2.Models;
+@model MemoryVM
 
 @{
     ViewBag.PageTitle = "Memory";
     ViewBag.PageName = "Memory";
 }
 
-<h1>ViewBag.PageName</h1>
+@foreach (var cpcase in Model.CPMemory)
+{
+	<div class="item">
+		<img class="itemimages" src="~/Content/images/computerpartsimages/Item1image.png" height="200" width="180">
+		<h4>@cpcase.ItemTitle</h4>
+		<h2>$@cpcase.ItemPrice</h2>
+		<div class="minidescription">
+			<ul>
+				<li>@cpcase.MiniDescription</li>
+				<li>@cpcase.MiniDescription2</li>
+				<li>@cpcase.MiniDescription3</li>
+			</ul>
+
+			<button type="button" id="Link">@cpcase.ItemLink</button>
+		</div>
+	</div>
+
+	<div id="hidden">
+		<p><b>Feature Summary</b></p>
+		<div id="long">
+			<ul>
+
+
+				<li>@cpcase.LongDescription1</li>
+				<li>@cpcase.LongDescription2</li>
+				<li>@cpcase.LongDescription3</li>
+			</ul>
+			<button type="button" id="Wishlist">@cpcase.Wishlist</button>
+			<button type="button" id="Remove">@cpcase.RemoveDetails</button>
+		</div>
+		<table id="pricetable">
+			<tr>
+				<th id="colname">Online Retailer</th>
+				<th id="colname">Price</th>
+			</tr>
+			<tr>
+				<td id="box">
+					<a href="@cpcase.Price1Link" target="_blank">
+						@cpcase.Price1Name
+					</a>
+				</td>
+				<td id="box">$@cpcase.ItemPrice</td>
+			</tr>
+			<tr>
+				<td id="box"><a href="@cpcase.Price2Link" target="_blank"></a>@cpcase.Price2Name</td>
+				<td id="box">$@cpcase.ItemPrice2</td>
+			</tr>
+		</table>
+	</div>
+}
