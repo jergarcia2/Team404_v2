@@ -59,19 +59,29 @@ namespace Team404_v2.Controllers
 
         public ActionResult CoolingSystems()
         {
-            CoolingSystemsVM model = new CoolingSystemsVM();
-            CPCoolingSystems Item1 = new CPCoolingSystems();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Details";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.PCCoolingSystems.Add(Item1);
+			//CoolingSystemsVM model = new CoolingSystemsVM();
+			//CPCoolingSystems Item1 = new CPCoolingSystems();
+			//Item1.ItemTitle = "Item 1 Title Goes Here";
+			//Item1.ItemLink = "View Item Details";
+			//Item1.MiniDescription.Add("UPC:xxxxxxxxx");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//model.PCCoolingSystems.Add(Item1);
 
-            return View(model);
-        }
+			//return View(model);
+			var model = new CoolingSystemsVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.CPCoolingSystems)
+			{
+				model.PCCoolingSystems.Add(item);
+			}
+
+			return View(model);
+		
+	}
+
 
         public ActionResult Memory()
         {
@@ -98,82 +108,75 @@ namespace Team404_v2.Controllers
 
         public ActionResult Motherboards()
         {
-            MotherboardVM model = new MotherboardVM();
-            CPMotherboard Item1 = new CPMotherboard();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Details";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.CPMotherboard.Add(Item1);
+			//MotherboardVM model = new MotherboardVM();
+			//CPMotherboard Item1 = new CPMotherboard();
+			//Item1.ItemTitle = "Item 1 Title Goes Here";
+			//Item1.ItemLink = "View Item Details";
+			//Item1.MiniDescription.Add("UPC:xxxxxxxxx");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//model.CPMotherboard.Add(Item1);
 
-            return View(model);
-        }
+			var model = new MotherboardVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.CPMotherboard)
+			{
+				model.CPMotherboard.Add(item);
+			}
 
-        public ActionResult PowerSupply()
+			return View(model);
+		}
+
+		public ActionResult PowerSupply()
         {
-            PowerSupplyVM model = new PowerSupplyVM();
-            CPPowerSupply Item1 = new CPPowerSupply();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Details";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.PowerSupplyItems.Add(Item1);
+			var model = new PowerSupplyVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.CPPowerSupply)
+			{
+				model.CPPowerSupply.Add(item);
+			}
 
-            return View(model);
-        }
+			return View(model);
+		
+	}
 
         public ActionResult Processors()
         {
-            ProcessorsVM model = new ProcessorsVM();
-            CPProcessors Item1 = new CPProcessors();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Details";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.ProcessorsItems.Add(Item1);
+			var model = new ProcessorsVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.CPProcessors)
+			{
+				model.CPProcessors.Add(item);
+			}
 
-            return View(model);
-        }
+			return View(model);
+		}
 
-        public ActionResult SoundCards()
+		public ActionResult SoundCards()
         {
-            SoundCardsVM model = new SoundCardsVM();
-            CPSoundCards Item1 = new CPSoundCards();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Details";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.SoundCardsItems.Add(Item1);
+			var model = new SoundCardsVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.CPSoundCards)
+			{
+				model.CPSoundCards.Add(item);
+			}
 
-            return View(model);
-        }
+			return View(model);
+		
+	}
 
         public ActionResult VideoCards()
         {
-            VideoCardsVM model = new VideoCardsVM();
-            CPVideoCards Item1 = new CPVideoCards();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Details";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.VideoCardsItems.Add(Item1);
+			var model = new VideoCardsVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.CPVideoCards)
+			{
+				model.CPVideoCards.Add(item);
+			}
 
-            return View(model);
-        }
-    }
+			return View(model);
+		}
+	}
 }
