@@ -7,11 +7,11 @@ namespace Team404_v2.Models
 {
     public class AdaptersVM
     {
-		public List<AAdapters> AdaptersItems { get; set; }
+		public List<AAdapters> AAdapters { get; set; }
 
 		public AdaptersVM()
 		{
-			AdaptersItems = new List<AAdapters>();
+			AAdapters = new List<AAdapters>();
 		}
 	}
 }

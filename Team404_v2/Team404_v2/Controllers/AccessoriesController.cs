@@ -17,18 +17,25 @@ namespace Team404_v2.Controllers
 
         public ActionResult Adapter()
         {
-            AdaptersVM model = new AdaptersVM();
-            AAdapters Item1 = new AAdapters();
-            Item1.ItemTitle = "Item 1 Title Goes Here";
-            Item1.ItemLink = "View Item Detials";
-            Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            Item1.MiniDescription.Add("Bullet goes here");
-            model.AdaptersItems.Add(Item1);
+			//AdaptersVM model = new AdaptersVM();
+			//AAdapters Item1 = new AAdapters();
+			//Item1.ItemTitle = "Item 1 Title Goes Here";
+			//Item1.ItemLink = "View Item Detials";
+			//Item1.MiniDescription.Add("UPC:xxxxxxxxx");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//Item1.MiniDescription.Add("Bullet goes here");
+			//model.AdaptersItems.Add(Item1);
 
-            return View(model);
+			var model = new AdaptersVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.AAdapters)
+			{
+				model.AAdapters.Add(item);
+			}
+
+			return View(model);
         }
 
         public ActionResult Chargers()

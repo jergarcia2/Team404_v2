@@ -7,32 +7,35 @@
 }
 
 
-@foreach (var M in Model.MemoryItems)
+@foreach (var cpcase in Model.CPMemory)
 {
-    <div class="item">
-        <h4>@M.ItemTitle</h4>
-        <h2>@M.ItemPrice</h2>
-        <div class="minidescription">
-            <ul>
-                @foreach (var bp in M.MiniDescription)
-                {
-                    <li>@bp</li>
-                }
-            </ul>
-            <button class="Link"> @M.ItemLink </button>
-        </div>
-    </div>
+	<div class="item">
+		<img class="itemimages" src="~/Content/images/computerpartsimages/Item1image.png" height="200" width="180">
+		<h4>@cpcase.ItemTitle</h4>
+		<h2>$@cpcase.ItemPrice</h2>
+		<div class="minidescription">
+			<ul>
+				<li>@cpcase.MiniDescription</li>
+				<li>@cpcase.MiniDescription2</li>
+				<li>@cpcase.MiniDescription3</li>
+			</ul>
+
+			<button type="button" id="Link">@cpcase.ItemLink</button>
+		</div>
+	</div>
+
 	<div id="hidden">
 		<p><b>Feature Summary</b></p>
 		<div id="long">
 			<ul>
-				@foreach (var more in M.LongDescription)
-				{
-					<li>@more</li>
-				}
+
+
+				<li>@cpcase.LongDescription1</li>
+				<li>@cpcase.LongDescription2</li>
+				<li>@cpcase.LongDescription3</li>
 			</ul>
-			<button type="button" id="Wishlist">@M.Wishlist</button>
-			<button type="button" id="Remove">@M.RemoveDetails</button>
+			<button type="button" id="Wishlist">@cpcase.Wishlist</button>
+			<button type="button" id="Remove">@cpcase.RemoveDetails</button>
 		</div>
 		<table id="pricetable">
 			<tr>
@@ -41,16 +44,17 @@
 			</tr>
 			<tr>
 				<td id="box">
-					<a href="#" target="_blank">
-						@M.Price1Name
+					<a href="@cpcase.Price1Link" target="_blank">
+						@cpcase.Price1Name
 					</a>
 				</td>
-				<td id="box">$@M.ItemPrice</td>
+				<td id="box">$@cpcase.ItemPrice</td>
 			</tr>
 			<tr>
-				<td id="box"><a href="#" target="_blank"></a>@M.Price2Name</td>
-				<td id="box">$@M.ItemPrice2</td>
+				<td id="box"><a href="@cpcase.Price2Link" target="_blank"></a>@cpcase.Price2Name</td>
+				<td id="box">$@cpcase.ItemPrice2</td>
 			</tr>
 		</table>
 	</div>
+}
 }

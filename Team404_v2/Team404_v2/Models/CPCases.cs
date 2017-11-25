@@ -43,10 +43,19 @@ namespace Team404_v2.Models
 		public string Price1Name { get; set; }
 
 		[MaxLength(250)]
+		public string Price1Link { get; set; }
+
+		[MaxLength(250)]
 		public string Price2Name { get; set; }
 
 		[MaxLength(250)]
+		public string Price2Link { get; set; }
+
+		[MaxLength(250)]
 		public string Price3Name { get; set; }
+
+		[MaxLength(250)]
+		public string Price3Link { get; set; }
 
 		
 		public decimal? ItemPrice { get; set; }
