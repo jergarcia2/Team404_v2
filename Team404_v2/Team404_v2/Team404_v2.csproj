@@ -243,6 +243,7 @@
     <Compile Include="Models\WishlistVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="WishlistsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\mydb.mdf" />
@@ -351,6 +352,11 @@
     <Content Include="Views\Bundles\Index.cshtml" />
     <Content Include="Views\Bundles\MidGrade.cshtml" />
     <Content Include="Views\Bundles\Professional.cshtml" />
+    <Content Include="Views\Wishlists\Create.cshtml" />
+    <Content Include="Views\Wishlists\Delete.cshtml" />
+    <Content Include="Views\Wishlists\Details.cshtml" />
+    <Content Include="Views\Wishlists\Edit.cshtml" />
+    <Content Include="Views\Wishlists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -14,7 +14,7 @@
 		<th id="colname">Price 3</th>
 		<th id="colname">Action</th>
 	</tr>
-	@foreach (var SC in Model.ListItems)
+	@foreach (var SC in Model.Wishlist)
 	{
 		<tr>
 			<td id="box">@SC.ItemNames</td>
@@ -23,6 +23,7 @@
 			<td id="box">$@SC.Prices3</td>
 
 			<td>
+				<button type="button" id="Product"> @SC.ProductLink</button>
 				<button type="button" id="Delete">@SC.LinkRemove</button>
 				<div id="divide"></div>
 				<button type="button" id="Undo">@SC.Undo</button>

@@ -16,26 +16,15 @@ namespace Team404_v2.Controllers
 
         public ActionResult WishList()
         {
-            WishlistVM model = new WishlistVM();
-            Wishlist Item1 = new Wishlist();
-            Wishlist Item2 = new Wishlist();
-            Item1.ItemNames = "Product 1";
-            Item1.LinkRemove = "Delete";
-            Item1.Undo = "Undo";
-            Item1.Prices1 = 80;
-            Item1.Prices2 = 75;
-            Item1.Prices3 = 70;
-            model.ListItems.Add(Item1);
-            Item2.ItemNames = "Product 2";
-            Item2.LinkRemove = "Delete";
-            Item2.Undo = "Undo";
-            Item2.Prices1 = 80;
-            Item2.Prices2 = 75;
-            Item2.Prices3 = 70;
-            model.ListItems.Add(Item2);
+			var model = new WishlistVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.Wishlist)
+			{
+				model.Wishlist.Add(item);
+			}
 
-            return View(model);
-        }
+			return View(model);
+		}
 
         public ActionResult Contact()
         {

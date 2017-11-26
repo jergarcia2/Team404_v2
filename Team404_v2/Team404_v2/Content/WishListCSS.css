@@ -25,7 +25,7 @@
 	margin-top: -45px;
 }
 
-#Delete, #Undo {
+#Delete, #Undo,#Product {
 	background-color: grey;
 	color: black;
 }

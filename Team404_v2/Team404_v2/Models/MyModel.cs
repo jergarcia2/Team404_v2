@@ -44,6 +44,9 @@ namespace Team404_v2.Models
 	public virtual DbSet<MidGradeBundles> MidGradeBundles { get; set; }
 	public virtual DbSet<ProfessionalBundles> ProfessionalBundles { get; set; }
 
+
+		public virtual DbSet<Wishlist> Wishlist { get; set; }
+
 	}
 
 	//public class MyEntity
