@@ -23,8 +23,7 @@ namespace Team404_v2.Models
 		// on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 		//Computer Parts
 
-		public class Product
-		{
+		
 
 			public virtual DbSet<CPCases> CPCases { get; set; }
 			public virtual DbSet<CPMemory> CPMemory { get; set; }
@@ -49,7 +48,7 @@ namespace Team404_v2.Models
 			public virtual DbSet<MidGradeBundles> MidGradeBundles { get; set; }
 			public virtual DbSet<ProfessionalBundles> ProfessionalBundles { get; set; }
 
-		}
+	
 		public virtual DbSet<Wishlist> Wishlist { get; set; }
 
 	}
