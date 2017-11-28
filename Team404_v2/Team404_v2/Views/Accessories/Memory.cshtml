@@ -1,12 +1,11 @@
-﻿@using Team404_v2.Models;
-@model MemoryVM
+﻿@model Team404_v2.Models.ProductVM
 
 @{
     ViewBag.PageTitle = "Memory";
     ViewBag.PageName = "Memory";
 }
 
-@foreach (var cpcase in Model.CPMemory)
+@foreach (var cpcase in Model.Products)
 {
 	<div class="item">
 		<img class="itemimages" src="~/Content/images/computerpartsimages/Item1image.png" height="200" width="180">

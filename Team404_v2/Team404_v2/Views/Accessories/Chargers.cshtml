@@ -1,5 +1,4 @@
-﻿@using Team404_v2.Models;
-@model ChargersVM
+﻿@model Team404_v2.Models.ProductVM
 
 @{
     ViewBag.PageTitle= "Chargers";
@@ -9,7 +8,7 @@
 
 
 
-@foreach (var cpcase in Model.AChargers)
+@foreach (var cpcase in Model.Products)
 {
 	<div class="item">
 		<img class="itemimages" src="~/Content/images/computerpartsimages/Item1image.png" height="200" width="180">

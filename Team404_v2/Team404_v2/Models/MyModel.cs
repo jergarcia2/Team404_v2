@@ -26,7 +26,7 @@ namespace Team404_v2.Models
 		
 
 
-			//bundles 
+		
 
 			public virtual DbSet<Products> Products { get; set; }
 		public virtual DbSet<Bundles> Bundles { get; set; }
