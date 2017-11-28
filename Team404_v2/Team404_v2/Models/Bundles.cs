@@ -10,6 +10,12 @@ namespace Team404_v2.Models
     {
 		[Key]
 		public int id { get; set; }
+
+		[Required]
+		[MaxLength(50)]
+		[Display(Name = "Category")]
+		public string ProductCategory { get; set; }
+
 		[MaxLength(250)]
 		public string BundleTitle { get; set; }
 

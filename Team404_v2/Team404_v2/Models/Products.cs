@@ -70,7 +70,6 @@ namespace Team404_v2.Models
         [MaxLength(250)]
         public string Price3Link { get; set; }
 
-        [Required]
         [Display(Name = "Item Price")]
         public decimal? ItemPrice { get; set; }
 
