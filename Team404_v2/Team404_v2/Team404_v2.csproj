@@ -233,6 +233,7 @@
     <Compile Include="Models\PhonesVM.cs" />
     <Compile Include="Models\PowerSupplyVM.cs" />
     <Compile Include="Models\ProcessorsVM.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\ProfessionalBundles.cs" />
     <Compile Include="Models\ProfessionalVM.cs" />
     <Compile Include="Models\SignInFM.cs" />
