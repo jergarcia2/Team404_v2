@@ -1,11 +1,18 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset = "utf-8" />
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-	< title ></ title >
-</ head >
-< body >
+namespace Team404_v2.Models
+{
+	public class ProductVM
+	{
 
-</ body >
-</ html >
+		public List<Products> Products { get; set; }
+
+		public ProductVM()
+		{
+			Products = new List<Products>();
+		}
+	}
+}

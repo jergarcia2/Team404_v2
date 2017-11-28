@@ -40,11 +40,11 @@ namespace Team404_v2.Controllers
 
 			//return View(model);
 
-			var model = new BeginnerVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.BeginnerBundles)
+			foreach (var item in ctx.Products)
 			{
-				model.BeginnerBundles.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -76,11 +76,11 @@ namespace Team404_v2.Controllers
 
 			//return View(model);
 
-			var model = new MidGradeVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.MidGradeBundles)
+			foreach (var item in ctx.Products)
 			{
-				model.MidGradeBundles.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -111,11 +111,11 @@ namespace Team404_v2.Controllers
 
 			//return View(model);
 
-			var model = new ProfessionalVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.ProfessionalBundles)
+			foreach (var item in ctx.Products)
 			{
-				model.ProfessionalBundles.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);

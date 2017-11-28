@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Team404_v2.Models
 {
-    public class BeginnerBundles
+    public class Bundles
     {
 		[Key]
 		public int id { get; set; }

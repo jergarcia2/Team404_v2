@@ -28,11 +28,11 @@ namespace Team404_v2.Controllers
 			//Item1.MiniDescription.Add("Bullet goes here");
 			//model.AdaptersItems.Add(Item1);
 
-			var model = new AdaptersVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.AAdapters)
+			foreach (var item in ctx.Products)
 			{
-				model.AAdapters.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -51,11 +51,11 @@ namespace Team404_v2.Controllers
 			//Item1.MiniDescription.Add("Bullet goes here");
 			//model.AChargers.Add(Item1);
 
-			var model = new ChargersVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.AChargers)
+			foreach (var item in ctx.Products)
 			{
-				model.AChargers.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -74,11 +74,11 @@ namespace Team404_v2.Controllers
 			//Item1.MiniDescription.Add("Bullet goes here");
 			//model.PhonesItems.Add(Item1);
 
-			var model = new PhonesVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.APhones)
+			foreach (var item in ctx.Products)
 			{
-				model.APhones.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -97,11 +97,11 @@ namespace Team404_v2.Controllers
 			//Item1.MiniDescription.Add("Bullet goes here");
 			//model.AMiscCables.Add(Item1);
 
-			var model = new MiscCablesVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.AMiscCables)
+			foreach (var item in ctx.Products)
 			{
-				model.AMiscCables.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -109,25 +109,25 @@ namespace Team404_v2.Controllers
 
 		public ActionResult StorageDevices()
 		{
-		//    StorageDevicesVM model = new StorageDevicesVM();
-		//    AStorageDevices Item1 = new AStorageDevices();
-		//    Item1.ItemTitle = "Item 1 Title Goes Here";
-		//    Item1.ItemLink = "View Item Detials";
-		//    Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-		//    Item1.MiniDescription.Add("Bullet goes here");
-		//    Item1.MiniDescription.Add("Bullet goes here");
-		//    Item1.MiniDescription.Add("Bullet goes here");
-		//    Item1.MiniDescription.Add("Bullet goes here");
-		//    model.StorageDevicesItems.Add(Item1);
+			//    StorageDevicesVM model = new StorageDevicesVM();
+			//    AStorageDevices Item1 = new AStorageDevices();
+			//    Item1.ItemTitle = "Item 1 Title Goes Here";
+			//    Item1.ItemLink = "View Item Detials";
+			//    Item1.MiniDescription.Add("UPC:xxxxxxxxx");
+			//    Item1.MiniDescription.Add("Bullet goes here");
+			//    Item1.MiniDescription.Add("Bullet goes here");
+			//    Item1.MiniDescription.Add("Bullet goes here");
+			//    Item1.MiniDescription.Add("Bullet goes here");
+			//    model.StorageDevicesItems.Add(Item1);
 
-		var model = new StorageDevicesVM();
-		var ctx = new MyModel();
-			foreach (var item in ctx.AStorageDevices)
+			var model = new ProductVM();
+			var ctx = new MyModel();
+			foreach (var item in ctx.Products)
 			{
-				model.AStorageDevices.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
-}
+		}
     }
 }
