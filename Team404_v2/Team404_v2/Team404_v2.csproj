@@ -361,6 +361,21 @@
     <Content Include="Content\images\computerpartsimages\SoundCards\Soundcard_Creative\Soundcardpic3.jpg" />
     <Content Include="Content\images\computerpartsimages\SoundCards\Soundcard_Creative\Soundcardpic4.jpg" />
     <Content Include="Content\images\computerpartsimages\SoundCards\Soundcard_Creative\Soundcardpic5.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1070\Videocardpic1.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1070\Videocardpic2.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1070\Videocardpic3.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1070\Videocardpic4.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1070\Videocardpic5.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080TI\Videocardpic1.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080TI\Videocardpic2.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080TI\Videocardpic3.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080TI\Videocardpic4.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080TI\Videocardpic5.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080\Videocardpic1.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080\Videocardpic2.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080\Videocardpic3.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080\Videocardpic4.jpg" />
+    <Content Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080\Videocardpic5.jpg" />
     <Content Include="Content\images\siteimages\Logo2-navbar.png" />
     <Content Include="Content\images\siteimages\Logo2-navmain.png" />
     <Content Include="Content\images\siteimages\Logo2.png" />
@@ -457,9 +472,6 @@
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Corsair\" />
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Crucial\" />
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Kingston\" />
-    <Folder Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1070\" />
-    <Folder Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080TI\" />
-    <Folder Include="Content\images\computerpartsimages\VideoCards\Videocards_GTX1080\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
