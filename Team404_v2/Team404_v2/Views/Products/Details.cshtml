@@ -1,0 +1,178 @@
+﻿@model Team404_v2.Models.Products
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Products</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemTitle)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ItemTitle)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MiniDescription)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MiniDescription)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MiniDescription2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MiniDescription2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MiniDescription3)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MiniDescription3)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LongDescription1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LongDescription1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LongDescription2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LongDescription2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LongDescription3)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LongDescription3)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemLink)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ItemLink)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Wishlist)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Wishlist)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price1Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price1Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price1Link)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price1Link)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price2Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price2Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price2Link)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price2Link)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price3Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price3Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price3Link)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price3Link)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ItemPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemPrice2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ItemPrice2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RemoveDetails)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RemoveDetails)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductCategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductCategory)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
