@@ -23,33 +23,14 @@ namespace Team404_v2.Models
 		// on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 		//Computer Parts
 
-		public class Product
-		{
+		
 
-			public virtual DbSet<CPCases> CPCases { get; set; }
-			public virtual DbSet<CPMemory> CPMemory { get; set; }
-			public virtual DbSet<CPCoolingSystems> CPCoolingSystems { get; set; }
-			public virtual DbSet<CPMotherboard> CPMotherboard { get; set; }
-			public virtual DbSet<CPPowerSupply> CPPowerSupply { get; set; }
-			public virtual DbSet<CPSoundCards> CPSoundCards { get; set; }
-			public virtual DbSet<CPVideoCards> CPVideoCards { get; set; }
-			public virtual DbSet<CPProcessors> CPProcessors { get; set; }
-
-
-			//Accessories
-			public virtual DbSet<AAdapters> AAdapters { get; set; }
-			public virtual DbSet<AChargers> AChargers { get; set; }
-			public virtual DbSet<AMiscCables> AMiscCables { get; set; }
-			public virtual DbSet<APhones> APhones { get; set; }
-			public virtual DbSet<AStorageDevices> AStorageDevices { get; set; }
 
 			//bundles 
 
-			public virtual DbSet<BeginnerBundles> BeginnerBundles { get; set; }
-			public virtual DbSet<MidGradeBundles> MidGradeBundles { get; set; }
-			public virtual DbSet<ProfessionalBundles> ProfessionalBundles { get; set; }
+			public virtual DbSet<Products> Products { get; set; }
+		public virtual DbSet<Bundles> Bundles { get; set; }
 
-		}
 		public virtual DbSet<Wishlist> Wishlist { get; set; }
 
 	}

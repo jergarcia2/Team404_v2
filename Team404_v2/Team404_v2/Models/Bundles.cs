@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Team404_v2.Models
 {
-    public class ProfessionalBundles
+    public class Bundles
     {
 		[Key]
 		public int id { get; set; }
@@ -27,7 +27,7 @@ namespace Team404_v2.Models
 		public string RemoveDetails { get; set; }
 
 		[MaxLength(250)]
-		public string MiniDescription11 { get; set; }
+		public string MiniDescription11 {get; set; }
 		[MaxLength(250)]
 		public string MiniDescription12 { get; set; }
 		[MaxLength(250)]

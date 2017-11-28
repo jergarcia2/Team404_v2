@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace Team404_v2.Models
 {
-    public class PhonesVM
-    {
-		public List<APhones> APhones { get; set; }
+	public class ProductVM
+	{
 
-		public PhonesVM()
+		public List<Products> Products { get; set; }
+
+		public ProductVM()
 		{
-			 APhones = new List<APhones>();
+			Products = new List<Products>();
 		}
 	}
 }

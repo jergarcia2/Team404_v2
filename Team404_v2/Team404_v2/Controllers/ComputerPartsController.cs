@@ -18,19 +18,20 @@ namespace Team404_v2.Controllers
         public ActionResult Cases()
         {
 
-			var model = new CasesVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPCases)
+			foreach (var item in ctx.Products)
 			{
-				model.CPCases.Add(item);
-
+				model.Products.Add(item);
 			}
-				
-				
-				
-				//CasesVM model = new CasesVM();
-            //CPCases ctxz= new CPCases();
-		
+
+			return View(model);
+
+
+
+			//CasesVM model = new CasesVM();
+			//CPCases ctxz= new CPCases();
+
 			//Item1.ItemTitle = "DIYPC Skyline-06-WG Black/Green Dual USB 3.0 ATX Full Tower Gaming Computer Case";
 			//Item1.ItemLink = "View Item Details";
 			//Item1.Price1Name = "Newegg";
@@ -54,7 +55,7 @@ namespace Team404_v2.Controllers
 
 			//model.CasesItems.Add(Item1);
 
-            return View(model);
+			
         }
 
         public ActionResult CoolingSystems()
@@ -71,27 +72,28 @@ namespace Team404_v2.Controllers
 			//model.PCCoolingSystems.Add(Item1);
 
 			//return View(model);
-			var model = new CoolingSystemsVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPCoolingSystems)
+			foreach (var item in ctx.Products)
 			{
-				model.PCCoolingSystems.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
-		
-	}
+
+		}
 
 
         public ActionResult Memory()
         {
-			var model = new MemoryVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPMemory)
+			foreach (var item in ctx.Products)
 			{
-				model.CPMemory.Add(item);
-
+				model.Products.Add(item);
 			}
+
+			
 			//MemoryVM model = new MemoryVM();
 			//CPMemory Item1 = new CPMemory();
 			//Item1.ItemTitle = "Item 1 Title Goes Here";
@@ -119,11 +121,11 @@ namespace Team404_v2.Controllers
 			//Item1.MiniDescription.Add("Bullet goes here");
 			//model.CPMotherboard.Add(Item1);
 
-			var model = new MotherboardVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPMotherboard)
+			foreach (var item in ctx.Products)
 			{
-				model.CPMotherboard.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -131,24 +133,24 @@ namespace Team404_v2.Controllers
 
 		public ActionResult PowerSupply()
         {
-			var model = new PowerSupplyVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPPowerSupply)
+			foreach (var item in ctx.Products)
 			{
-				model.CPPowerSupply.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
-		
-	}
+
+		}
 
         public ActionResult Processors()
         {
-			var model = new ProcessorsVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPProcessors)
+			foreach (var item in ctx.Products)
 			{
-				model.CPProcessors.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
@@ -156,24 +158,24 @@ namespace Team404_v2.Controllers
 
 		public ActionResult SoundCards()
         {
-			var model = new SoundCardsVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPSoundCards)
+			foreach (var item in ctx.Products)
 			{
-				model.CPSoundCards.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
-		
-	}
+
+		}
 
         public ActionResult VideoCards()
         {
-			var model = new VideoCardsVM();
+			var model = new ProductVM();
 			var ctx = new MyModel();
-			foreach (var item in ctx.CPVideoCards)
+			foreach (var item in ctx.Products)
 			{
-				model.CPVideoCards.Add(item);
+				model.Products.Add(item);
 			}
 
 			return View(model);
