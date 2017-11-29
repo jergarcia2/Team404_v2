@@ -191,7 +191,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="BundleProductController.cs" />
+    <Compile Include="Controllers\BundleProductController.cs" />
     <Compile Include="Controllers\AccessoriesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BundlesController.cs" />
@@ -214,10 +214,10 @@
     <Compile Include="Models\SignInFM.cs" />
     <Compile Include="Models\Wishlist.cs" />
     <Compile Include="Models\WishlistVM.cs" />
-    <Compile Include="ProductsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="WishlistsController.cs" />
+    <Compile Include="Controllers\WishlistsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\mydb.mdf" />
