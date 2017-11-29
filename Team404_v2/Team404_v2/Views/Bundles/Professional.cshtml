@@ -1,5 +1,4 @@
-﻿@using Team404_v2.Models;
-@model ProfessionalVM
+﻿@model Team404_v2.Models.BundlesVM
 @{
     ViewBag.PageTitle = "Professional Bundles";
     ViewBag.PageName = "Professional Bundles";
@@ -8,7 +7,7 @@
 	<link href="~/Content/Bundle.css" rel="stylesheet" type="text/css" />
 
 }
-@foreach (var bb in Model.ProfessionalBundles)
+@foreach (var bb in Model.BundleS)
 {
 	<div class="item">
 		<img class="itemimages" src="~/Content/images/bundleimages/bundle1.jpg" height="200" width="180">

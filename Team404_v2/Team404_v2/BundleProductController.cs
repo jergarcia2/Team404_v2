@@ -10,7 +10,7 @@ using Team404_v2.Models;
 
 namespace Team404_v2
 {
-    public class BundlesController : Controller
+    public class BundleProductController : Controller
     {
         private MyModel db = new MyModel();
 

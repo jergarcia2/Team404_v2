@@ -1,5 +1,4 @@
-﻿@using Team404_v2.Models;
-@model BeginnerVM
+﻿@model Team404_v2.Models.BundlesVM
 @{
 	ViewBag.PageTitle = "Beginner Bundles";
     ViewBag.PageName = "Noob Bundles";
@@ -11,7 +10,7 @@
 }
 
 
-@foreach (var bb in Model.BeginnerBundles)
+@foreach (var bb in Model.Bundles)
 {
 	<div class="item">
 		<img class="itemimages" src="~/Content/images/bundleimages/bundle1.jpg" height="200" width="180">
