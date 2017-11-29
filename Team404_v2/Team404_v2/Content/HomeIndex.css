@@ -1,6 +1,7 @@
 ﻿.homelogodiv {
-    margin: auto;
-    padding-top: 15px;
+    margin-top: -50px;
+    margin-bottom: 15px;
+    padding-top: 10px;
     padding-bottom: 10px;
     display: block;
 }
@@ -16,6 +17,11 @@
     padding-left: 65px;
 }
 
-p {
-    padding-top: 15px;
+#siteintro {
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+#homebtn {
+    background-color: darkgoldenrod;
 }

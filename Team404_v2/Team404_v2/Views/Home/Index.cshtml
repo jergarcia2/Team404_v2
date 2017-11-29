@@ -16,11 +16,11 @@
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
 </div>
 
 <div class="row">
-   <div class="col-md-12">
+   <div class="col-md-12" id="siteintro">
        <p>
            Nerd’s Treasure Chest is an online ecommerce website operated and
            developed by fellow computer enthusiasts. Our companies goal is to provide enthusiasts
@@ -32,41 +32,56 @@
            guaranteed to fulfil all their present and future needs.
        </p>
    </div>
-   <div class="col-md-4">
-       <h2>Computer Parts</h2>
-       <p>
-           Nerd’s Treasure Chest offers the largest selection of computer parts found on any other website.
-           Our database contains all the latest and greatest components that the market has to offer and at the lowest
-           prices that are hard to pass up. The Nerd’s Treasure Chest database also gives you the ability to filter out parts based on their
-           platform, generation, clock speeds, and other specific features that you may be looking for. In addition, we provide professionally
-           written descriptions for our products that are sure to answer all your questions on the products. However, feel free to contact us on
-           our Contact Us page for any clarification you may need on products.
-       </p>
-        <p><a class="btn btn-default" href="~/Views/ComputerParts/Index.cshtml">Computer Parts &raquo;</a></p>
+   <div class="col-sm-6 col-md-4">
+       <div class="thumbnail">
+           <img src="..." alt="Pic here 242x200" />
+           <div class="caption">
+               <h3>Computer Parts</h3>
+               <p>
+                   Nerd’s Treasure Chest offers the largest selection of computer parts found on any other website.
+                   Our database contains all the latest and greatest components that the market has to offer and at the lowest
+                   prices that are hard to pass up. The Nerd’s Treasure Chest database also gives you the ability to filter out parts based on their
+                   platform, generation, clock speeds, and other specific features that you may be looking for. In addition, we provide professionally
+                   written descriptions for our products that are sure to answer all your questions on the products. However, feel free to contact us on
+                   our Contact Us page for any clarification you may need on products.
+               </p>
+               <p><a class="btn btn-default" href="~/ComputerParts/Index" role="button" id="homebtn">Computer Parts &raquo;</a></p>
+           </div>
+       </div>
     </div>
-    <div class="col-md-4">
-        <h2>Accessories</h2>
-        <p>
-            Nerd’s Treasure Chest offers one of the best selection of
-            accessories for your new system, if not the best. We carry a wide selection of brands, models, and
-            price points that are sure to fit into anyone’s budget. Our
-            company also makes sure to only advertise the most reputable of products,
-            so our customers can feel confident that they are getting the best quality product for their needs.
-        </p>
-        <p><a class="btn btn-default" href="~/Views/Accessories/Index.cshtml">Accessories &raquo;</a></p>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="" alt="Pic here 242x200" />
+            <div class="caption">
+                <h3>Accessories</h3>
+                <p>
+                    Nerd’s Treasure Chest offers one of the best selection of
+                    accessories for your new system, if not the best. We carry a wide selection of brands, models, and
+                    price points that are sure to fit into anyone’s budget. Our
+                    company also makes sure to only advertise the most reputable of products,
+                    so our customers can feel confident that they are getting the best quality product for their needs.
+                </p>
+                <p><a class="btn btn-default" href="~/Accessories/Index" role="button" id="homebtn">Accessories &raquo;</a></p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Bundles</h2>
-        <p>
-            Nerd’s Treasure Chest realizes that some of our
-            customers aren’t very familiar with the pc building experience,
-            so we provide these customers a bundles category. This bundles category
-            has a few different packages that allow customers to feel confident about
-            their choice, without the need of extensive research to educate themselves on
-            all the potential products that may fulfill their needs. In addition, these bundle
-            deals are split into different categories: Beginner, Mid-Level, and Professional; all
-            of which contain a great assortment of parts that will fulfill your needs.
-        </p>
-        <p><a class="btn btn-default" href="~/Views/Bundles/Index.cshtml">Bundles &raquo;</a></p>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="..." alt="Pic here 242x200" />
+            <div class="caption">
+                <h3>Bundles</h3>
+                <p>
+                    Nerd’s Treasure Chest realizes that some of our
+                    customers aren’t very familiar with the pc building experience,
+                    so we provide these customers a bundles category. This bundles category
+                    has a few different packages that allow customers to feel confident about
+                    their choice, without the need of extensive research to educate themselves on
+                    all the potential products that may fulfill their needs. In addition, these bundle
+                    deals are split into different categories: Beginner, Mid-Level, and Professional; all
+                    of which contain a great assortment of parts that will fulfill your needs.
+                </p>
+                <p><a class="btn btn-default" href="~/Bundles/Index" role="button" id="homebtn">Bundles &raquo;</a></p>
+            </div>
+        </div>
     </div>
-</div>
+</div> <!-- End row -->
