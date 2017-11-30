@@ -17,45 +17,14 @@ namespace Team404_v2.Controllers
 
         public ActionResult Cases()
         {
+            var model = new ProductVM();
+            var ctx = new MyModel();
+            foreach (var item in ctx.Products)
+            {
+                model.Products.Add(item);
+            }
 
-			var model = new ProductVM();
-			var ctx = new MyModel();
-			foreach (var item in ctx.Products)
-			{
-				model.Products.Add(item);
-			}
-
-			return View(model);
-
-
-
-			//CasesVM model = new CasesVM();
-			//CPCases ctxz= new CPCases();
-
-			//Item1.ItemTitle = "DIYPC Skyline-06-WG Black/Green Dual USB 3.0 ATX Full Tower Gaming Computer Case";
-			//Item1.ItemLink = "View Item Details";
-			//Item1.Price1Name = "Newegg";
-			//Item1.Price2Name = "Amazon";
-			//Item1.ItemPrice = 87.99;
-			//Item1.ItemPrice2 = 107.01;
-			//Item1.MiniDescription.Add("Steel ATX Full Tower");
-			//Item1.MiniDescription.Add("Hot Swap Docking");
-			//Item1.MiniDescription.Add("Built in Green LED Fans: 5mm x 120mm");
-			//Item1.LongDescription.Add("Full black interior, Intel TAC 2.0");
-			//Item1.LongDescription.Add("Advanced cable management design ");
-			//Item1.LongDescription.Add("Advanced Bottom-Mounted PSU Design ");
-			//Item1.LongDescription.Add("Top mounted IO ports - 2x USB 3.0 for up-to-date high speed data transfer ");
-			//Item1.LongDescription.Add("Top-mounted HDD hot swap docking station provides superb file transfer  ");
-			//Item1.LongDescription.Add("Screw-less design for 5.25 Devices & 3.5 HDDs");
-			//Item1.LongDescription.Add("Front panel dust-proof mesh design; dust filter on top/bottom panel");
-			//Item1.LongDescription.Add("8 PCI slots provide flexibility for multiple graphics cards solutions.");
-			//Item1.Wishlist = "Add to Wishlist";
-			//Item1.RemoveDetails = "Hide Details";
-
-
-			//model.CasesItems.Add(Item1);
-
-			
+            return View(model);
         }
 
         public ActionResult CoolingSystems()
