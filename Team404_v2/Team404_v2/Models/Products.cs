@@ -32,10 +32,7 @@ namespace Team404_v2.Models
 
         [Required]
         [MaxLength(250)]
-<<<<<<< HEAD
-        [Display(Name = "Long Description")]
-        public string LongDescription1 { get; set; }
-=======
+
         [Display(Name = "Long D1")]
         public string LongDescription1 { get; set; }
 
@@ -46,7 +43,6 @@ namespace Team404_v2.Models
         [MaxLength(250)]
         [Display(Name = "Long D3")]
         public string LongDescription3 { get; set; }
->>>>>>> jeremylocal
 
         [Required]
         [MaxLength(250)]
