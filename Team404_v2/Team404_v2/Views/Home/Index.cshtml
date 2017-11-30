@@ -31,6 +31,14 @@
            which provide an overall well-rounded system that customers can be
            guaranteed to fulfil all their present and future needs.
        </p>
+       
+           @{ 
+               if(User.IsInRole("Admin"))
+               {
+                 <p>Admin is logged in</p>
+               }
+           }
+       
    </div>
    <div class="col-sm-6 col-md-4">
        <div class="thumbnail">
