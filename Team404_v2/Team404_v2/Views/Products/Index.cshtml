@@ -11,99 +11,129 @@
 </p>
 <table class="table">
     <tr>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.ItemTitle)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.MiniDescription)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LongDescription)
+        <th colspan="2">
+            @Html.DisplayNameFor(model => model.MiniDescription2)
         </th>
-        <th>
+        <th colspan="2">
+            @Html.DisplayNameFor(model => model.MiniDescription3)
+        </th>
+        <th colspan="2">
+            @Html.DisplayNameFor(model => model.LongDescription1)
+        </th>
+        <th colspan="2">
+            @Html.DisplayNameFor(model => model.LongDescription2)
+        </th>
+        <th colspan="2">
+            @Html.DisplayNameFor(model => model.LongDescription3)
+        </th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.ItemLink)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.Price1Name)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.Price1Link)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.Price2Name)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.Price2Link)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price3Link)
-        </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.Price3Name)
         </th>
-        <th>
+        <th colspan="2">
+            @Html.DisplayNameFor(model => model.Price3Link)
+        </th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.ItemPrice)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.ItemPrice2)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.RemoveDetails)
         </th>
-        <th>
+        <th colspan="2">
             @Html.DisplayNameFor(model => model.Category)
         </th>
-        <th></th>
+        <th colspan="6">
+            Controls
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.ItemTitle)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.MiniDescription)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LongDescription)
+        <td colspan="2">
+            @Html.DisplayFor(modelItem => item.MiniDescription2)
         </td>
-        <td>
+        <td colspan="2">
+            @Html.DisplayFor(modelItem => item.MiniDescription3)
+        </td>
+        <td colspan="2">
+            @Html.DisplayFor(modelItem => item.LongDescription1)
+        </td>
+        <td colspan="2">
+            @Html.DisplayFor(modelItem => item.LongDescription2)
+        </td>
+        <td colspan="2">
+            @Html.DisplayFor(modelItem => item.LongDescription3)
+        </td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.ItemLink)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.Price1Name)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.Price1Link)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.Price2Name)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.Price2Link)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price3Link)
-        </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.Price3Name)
         </td>
-        <td>
+        <td colspan="2">
+            @Html.DisplayFor(modelItem => item.Price3Link)
+        </td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.ItemPrice)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.ItemPrice2)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.RemoveDetails)
         </td>
-        <td>
+        <td colspan="2">
             @Html.DisplayFor(modelItem => item.Category)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        <td colspan="2">
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id })
+        </td>
+        <td colspan="2">
+            @Html.ActionLink("Details", "Details", new { id = item.Id })
+        </td>
+        <td colspan="2">
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
 }

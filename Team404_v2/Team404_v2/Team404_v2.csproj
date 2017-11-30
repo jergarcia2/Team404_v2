@@ -221,13 +221,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\mydb.mdf" />
-    <Content Include="App_Data\mydb.xml" />
     <Content Include="App_Data\mydb_log.ldf">
       <DependentUpon>mydb.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\treasure chest.mdf" />
-    <Content Include="App_Data\treasure chest_log.ldf">
-      <DependentUpon>treasure chest.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

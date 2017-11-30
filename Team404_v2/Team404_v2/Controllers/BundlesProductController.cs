@@ -46,7 +46,7 @@ namespace Team404_v2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,ProductCategory,BundleTitle,BundlePrice,BundleLink,ProductName1,ProductName2,ProductName3,Wishlist,RemoveDetails,MiniDescription11,MiniDescription12,MiniDescription13,MiniDescription21,MiniDescription22,MiniDescription23,MiniDescription31,MiniDescription32,MiniDescription33")] Bundles bundles)
+        public ActionResult Create([Bind(Include = "Id,ProductCategory,BundleTitle,BundlePrice,BundleLink,ProductName1,ProductName2,ProductName3,Wishlist,RemoveDetails,MiniD1,MiniD2,MiniD3,MiniD4,MiniD5,MiniD6,MiniD7,MiniD8,MiniD9")] Bundles bundles)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Team404_v2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,ProductCategory,BundleTitle,BundlePrice,BundleLink,ProductName1,ProductName2,ProductName3,Wishlist,RemoveDetails,MiniDescription11,MiniDescription12,MiniDescription13,MiniDescription21,MiniDescription22,MiniDescription23,MiniDescription31,MiniDescription32,MiniDescription33")] Bundles bundles)
+        public ActionResult Edit([Bind(Include = "Id,ProductCategory,BundleTitle,BundlePrice,BundleLink,ProductName1,ProductName2,ProductName3,Wishlist,RemoveDetails,MiniD1,MiniD2,MiniD3,MiniD4,MiniD5,MiniD6,MiniD7,MiniD8,MiniD9")] Bundles bundles)
         {
             if (ModelState.IsValid)
             {
