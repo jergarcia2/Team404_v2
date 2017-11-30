@@ -28,7 +28,7 @@ namespace Team404_v2.Models
 		[Required]
         [MaxLength(250)]
         [Display(Name = "Long Description")]
-        public string LongDescription { get; set; }
+        public string LongDescription1 { get; set; }
 
 		public string LongDescription2 { get; set; }
 		public string LongDescription3 { get; set; }
