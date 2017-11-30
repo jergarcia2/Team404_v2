@@ -84,8 +84,14 @@
                     </li>		
                     <!-- Bundles Nav End -->
 					<li><a href="~/Home/WishList">WishList</a></li>
-                    <li><a href="~/Products/Index">Products Mgt</a></li>
-                    <li><a href="~/BundlesProduct/Index">Bundles Mgt</a></li>
+                @{
+                    if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="~/Products/Index">Products Mgt</a></li>
+                        <li><a href="~/BundlesProduct/Index">Bundles Mgt</a></li>
+                        }
+
+                    }
                 </ul><!-- End Dropdown Navs-->		
                 <form class="navbar-form pull-right" role="search">
                     <div class="form-group">

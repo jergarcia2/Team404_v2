@@ -10,6 +10,7 @@ using Team404_v2.Models;
 
 namespace Team404_v2.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class BundlesProductController : Controller
     {
         private MyModel db = new MyModel();
