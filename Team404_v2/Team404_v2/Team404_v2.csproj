@@ -194,6 +194,7 @@
     <Compile Include="Controllers\BundleProductController.cs" />
     <Compile Include="Controllers\AccessoriesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Bundles1Controller.cs" />
     <Compile Include="Controllers\BundlesController.cs" />
     <Compile Include="Controllers\ComputerPartsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -495,6 +496,11 @@
     <Content Include="Views\Bundles\MidGrade.cshtml" />
     <Content Include="Views\Bundles\Professional.cshtml" />
     <Content Include="Views\Bundles\index.cshtml" />
+    <Content Include="Views\Bundles1\Create.cshtml" />
+    <Content Include="Views\Bundles1\Delete.cshtml" />
+    <Content Include="Views\Bundles1\Details.cshtml" />
+    <Content Include="Views\Bundles1\Edit.cshtml" />
+    <Content Include="Views\Bundles1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Corsair\" />
