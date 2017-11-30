@@ -298,7 +298,6 @@
     <Content Include="Content\images\banner2.svg" />
     <Content Include="Content\images\banner3.svg" />
     <Content Include="Content\images\banner4.svg" />
-    <Content Include="Content\images\bundleimages\bundle1.jpg" />
     <Content Include="Content\images\computerpartsimages\Cases\Case_Corsair\casepic1.jpg" />
     <Content Include="Content\images\computerpartsimages\Cases\Case_Corsair\casepic2.jpg" />
     <Content Include="Content\images\computerpartsimages\Cases\Case_Corsair\casepic3.jpg" />
@@ -511,6 +510,7 @@
     <Content Include="Views\Bundles\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\images\bundleimages\" />
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Corsair\" />
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Crucial\" />
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Kingston\" />
