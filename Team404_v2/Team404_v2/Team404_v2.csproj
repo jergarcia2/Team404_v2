@@ -492,23 +492,9 @@
     <Content Include="Views\ComputerParts\SoundCards.cshtml" />
     <Content Include="Views\ComputerParts\VideoCards.cshtml" />
     <Content Include="Views\Bundles\Beginner.cshtml" />
-    <Content Include="Views\Bundles\Index.cshtml" />
     <Content Include="Views\Bundles\MidGrade.cshtml" />
     <Content Include="Views\Bundles\Professional.cshtml" />
-    <Content Include="Views\Wishlists\Create.cshtml" />
-    <Content Include="Views\Wishlists\Delete.cshtml" />
-    <Content Include="Views\Wishlists\Details.cshtml" />
-    <Content Include="Views\Wishlists\Edit.cshtml" />
-    <Content Include="Views\Wishlists\Index.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
-    <Content Include="Views\Bundles\Create.cshtml" />
-    <Content Include="Views\Bundles\Delete.cshtml" />
-    <Content Include="Views\Bundles\Details.cshtml" />
-    <Content Include="Views\Bundles\Edit.cshtml" />
+    <Content Include="Views\Bundles\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Corsair\" />
