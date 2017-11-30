@@ -16,23 +16,15 @@ namespace Team404_v2.Models
 			: base("name=mydatabase")
 		{
 			Database.SetInitializer(new DropCreateDatabaseIfModelChanges<MyModel>());
-
 		}
 
 		// Add a DbSet for each entity type that you want to include in your model. For more information 
 		// on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 		//Computer Parts
 
-		
-
-
-		
-
-			public virtual DbSet<Products> Products { get; set; }
+		public virtual DbSet<Products> Products { get; set; }
 		public virtual DbSet<Bundles> Bundles { get; set; }
-
 		public virtual DbSet<Wishlist> Wishlist { get; set; }
-
 	}
 
 	//public class MyEntity

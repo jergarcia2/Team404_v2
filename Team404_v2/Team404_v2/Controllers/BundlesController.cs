@@ -10,7 +10,7 @@ namespace Team404_v2.Controllers
     public class BundlesController : Controller
     {
         // GET: Bundles
-        public ActionResult Index()
+        public ActionResult index()
         {
             return View();
         }

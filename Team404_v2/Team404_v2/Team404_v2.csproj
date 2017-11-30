@@ -191,14 +191,14 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\BundleProductController.cs" />
     <Compile Include="Controllers\AccessoriesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Bundles1Controller.cs" />
     <Compile Include="Controllers\BundlesController.cs" />
+    <Compile Include="Controllers\BundlesProductController.cs" />
     <Compile Include="Controllers\ComputerPartsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,7 +215,6 @@
     <Compile Include="Models\SignInFM.cs" />
     <Compile Include="Models\Wishlist.cs" />
     <Compile Include="Models\WishlistVM.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\WishlistsController.cs" />
@@ -496,11 +495,16 @@
     <Content Include="Views\Bundles\MidGrade.cshtml" />
     <Content Include="Views\Bundles\Professional.cshtml" />
     <Content Include="Views\Bundles\index.cshtml" />
-    <Content Include="Views\Bundles1\Create.cshtml" />
-    <Content Include="Views\Bundles1\Delete.cshtml" />
-    <Content Include="Views\Bundles1\Details.cshtml" />
-    <Content Include="Views\Bundles1\Edit.cshtml" />
-    <Content Include="Views\Bundles1\Index.cshtml" />
+    <Content Include="Views\BundlesProduct\Create.cshtml" />
+    <Content Include="Views\BundlesProduct\Delete.cshtml" />
+    <Content Include="Views\BundlesProduct\Details.cshtml" />
+    <Content Include="Views\BundlesProduct\Edit.cshtml" />
+    <Content Include="Views\BundlesProduct\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\bundleimages\" />
