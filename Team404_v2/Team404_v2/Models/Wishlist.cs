@@ -27,7 +27,8 @@ namespace Team404_v2.Models
 		public decimal? Prices1 { get; set; }
 		public decimal? Prices2 { get; set; }
 		public decimal? Prices3 {get; set;}
-	
 
-	}
+        [Required]
+        public Products Product { get; set; }
+    }
 }

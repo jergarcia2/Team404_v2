@@ -8,19 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using Team404_v2.Models;
 
-namespace Team404_v2
+namespace Team404_v2.Controllers
 {
-    public class BundleProductController : Controller
+    public class BundlesProductController : Controller
     {
         private MyModel db = new MyModel();
 
-        // GET: Bundles
+        // GET: BundlesProduct
         public ActionResult Index()
         {
             return View(db.Bundles.ToList());
         }
 
-        // GET: Bundles/Details/5
+        // GET: BundlesProduct/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace Team404_v2
             return View(bundles);
         }
 
-        // GET: Bundles/Create
+        // GET: BundlesProduct/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Bundles/Create
+        // POST: BundlesProduct/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace Team404_v2
             return View(bundles);
         }
 
-        // GET: Bundles/Edit/5
+        // GET: BundlesProduct/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace Team404_v2
             return View(bundles);
         }
 
-        // POST: Bundles/Edit/5
+        // POST: BundlesProduct/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace Team404_v2
             return View(bundles);
         }
 
-        // GET: Bundles/Delete/5
+        // GET: BundlesProduct/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace Team404_v2
             return View(bundles);
         }
 
-        // POST: Bundles/Delete/5
+        // POST: BundlesProduct/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

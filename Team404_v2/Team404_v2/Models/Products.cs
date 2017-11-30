@@ -9,6 +9,7 @@ namespace Team404_v2.Models
     public class Products
     {
         [Key]
+        [Required]
         public int Id { get; set; }
 
         [Required]
@@ -21,22 +22,10 @@ namespace Team404_v2.Models
         [Display(Name = "Mini Description")]
         public string MiniDescription { get; set; }
 
-        [MaxLength(250)]
-        public string MiniDescription2 { get; set; }
-
-        [MaxLength(250)]
-        public string MiniDescription3 { get; set; }
-
         [Required]
         [MaxLength(250)]
         [Display(Name = "Long Description")]
-        public string LongDescription1 { get; set; }
-
-        [MaxLength(250)]
-        public string LongDescription2 { get; set; }
-
-        [MaxLength(250)]
-        public string LongDescription3 { get; set; }
+        public string LongDescription { get; set; }
 
         [Required]
         [MaxLength(250)]
@@ -45,8 +34,8 @@ namespace Team404_v2.Models
 
         [Required]
         [MaxLength(250)]
-        [Display(Name = "WishList")]
-        public string Wishlist { get; set; }
+        [Display(Name = "Wishlist")]
+        public List<Wishlist> Wishlist { get; set; }
 
         [Required]
         [MaxLength(250)]
@@ -59,20 +48,26 @@ namespace Team404_v2.Models
         public string Price1Link { get; set; }
 
         [MaxLength(250)]
+        [Display(Name = "Price 2 Name")]
         public string Price2Name { get; set; }
 
         [MaxLength(250)]
+        [Display(Name = "Price 2 Link")]
         public string Price2Link { get; set; }
 
         [MaxLength(250)]
-        public string Price3Name { get; set; }
-
-        [MaxLength(250)]
+        [Display(Name = "Price 3 Link")]
         public string Price3Link { get; set; }
 
+        [MaxLength(250)]
+        [Display(Name = "Price 3 Name")]
+        public string Price3Name { get; set; }
+
+        [Required]
         [Display(Name = "Item Price")]
         public decimal? ItemPrice { get; set; }
 
+        [Display(Name = "Item 2 Price")]
         public decimal? ItemPrice2 { get; set; }
 
         [Required]
@@ -83,6 +78,6 @@ namespace Team404_v2.Models
         [Required]
         [MaxLength(50)]
         [Display(Name = "Category")]
-        public string ProductCategory { get; set; }
+        public string Category { get; set; }
     }
 }
