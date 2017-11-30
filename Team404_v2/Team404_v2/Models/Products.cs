@@ -22,12 +22,18 @@ namespace Team404_v2.Models
         [Display(Name = "Mini Description")]
         public string MiniDescription { get; set; }
 
-        [Required]
+		public string MiniDescription2 { get; set; }
+
+		public string MiniDescription3 { get; set; }
+		[Required]
         [MaxLength(250)]
         [Display(Name = "Long Description")]
-        public string LongDescription { get; set; }
+        public string LongDescription1 { get; set; }
 
-        [Required]
+		public string LongDescription2 { get; set; }
+		public string LongDescription3 { get; set; }
+
+		[Required]
         [MaxLength(250)]
         [Display(Name = "Item Link")]
         public string ItemLink { get; set; }
