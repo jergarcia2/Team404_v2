@@ -1,143 +1,17 @@
-﻿@model IEnumerable<Team404_v2.Models.Bundles>
-
-@{
-    Layout = null;
+﻿@{
+	ViewBag.PageTitle = "Bundles";
+	ViewBag.PageName = "Bundles";
 }
+<h2>@ViewData["Title"]</h2>
 
-<!DOCTYPE html>
+<p>
+	Nerd’s Treasure Chest realizes that some of our customers aren’t very familiar with the pc building experience, 
+	so we provide these customers a bundles category. This bundles category has a few different packages that allow customers to
+	feel confident about their choice, without the need of extensive research to educate themselves on all the potential products that may 
+	fulfill their needs. In addition, these bundle deals are split into different categories: Beginner, Mid-Level, and Professional; all of which
+	contain a great assortment of parts that will fulfill your needs. 
+</p>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductCategory)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BundleTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BundlePrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BundleLink)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Wishlist)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RemoveDetails)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription11)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription12)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription13)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription21)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription22)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription23)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription31)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription32)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiniDescription33)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductCategory)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BundleTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BundlePrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BundleLink)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Wishlist)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RemoveDetails)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription11)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription12)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription13)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription21)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription22)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription23)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription31)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription32)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiniDescription33)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.id })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+<script>
+  var root = '@Url.Content("~/")';
+</script>
