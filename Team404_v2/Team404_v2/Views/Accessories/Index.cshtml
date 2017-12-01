@@ -4,36 +4,52 @@
     ViewBag.PageName = "Accessories Home";
 }
 
+@section css{
+    <link href="~/Content/AccIndex.css" rel="stylesheet" type="text/css" />
+}
+
 <p>Nerd’s Treasure Chest offers one of the best selection of
 	accessories for your new system, if not the best. We carry a wide selection of brands, models, and  
 	price points that are sure to fit into anyone’s budget. Our
 	company also makes sure to only advertise the most reputable of products, 
 so our customers can feel confident that they are getting the best quality product for their needs.</p>
 
-<div class="row" id="cptbrow1">
+<div class="row accrow1" id="accrow1">
     <div class="col-xs-6 col-md-3">
         <div class="thumbnail">
-            <a href="~/ComputerParts/Cases">
-                <img src="..." alt="171x180">
+            <a href="~/Accessories/Adapter">
+                <img src="~/Content/images/Accessories/Adapters/Adapter_Ethernet/Adapterpic1.jpg" alt="171x180" height="171" width="180">
             </a>
             <div class="caption">
-                <h4>Cases</h4>
+                <h4>Adapter</h4>
             </div>
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
         <div class="thumbnail">
-            <a href="~/ComputerParts/CoolingSystems">
-                <img src="..." alt="171x180">
+            <a href="~/Accessories/Chargers">
+                <img src="~/Content/images/Accessories/Chargers/Chargers_APC/Chargerpic1.jpg" alt="171x180" height="171" width="180">
             </a>
             <div class="caption">
-                <h4>Cooling Systems</h4>
+                <h4>Chargers</h4>
             </div>
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
         <div class="thumbnail">
-            <a href="~/ComputerParts/Memory">
+            <a href="~/Accessories/HeadPhones">
+                <img src="~/Content/images/Accessories/Headphones/Headphones_Corsair/Headphonespic1.jpg" alt="171x180" height="171" width="180">
+            </a>
+            <div class="caption">
+                <h4>Headphones</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row accrow2" id="accrow2"> 
+    <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+            <a href="~/Accessories/Memory">
                 <img src="..." alt="171x180">
             </a>
             <div class="caption">
@@ -43,54 +59,25 @@ so our customers can feel confident that they are getting the best quality produ
     </div>
     <div class="col-xs-6 col-md-3">
         <div class="thumbnail">
-            <a href="~/ComputerParts/Motherboards">
-                <img src="..." alt="171x180">
+            <a href="~/Accessories/MiscCables">
+                <img src="~/Content/images/Accessories/Mis. Cables/Cable_Ethernet/Ethernetpic1.jpg" alt="171x180" height="171" width="180">
             </a>
             <div class="caption">
-                <h4>Motherboards</h4>
+                <h4>Misc. Cables</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+            <a href="~/Accessories/StorageDevices">
+                <img src="~/Content/images/Accessories/Storage Devices/Storage_ExternalHardDrive/HDpic1.jpg" height="171" width="180">
+            </a>
+            <div class="caption">
+                <h4>Storage Devices</h4>
             </div>
         </div>
     </div>
 </div>
-<div class="row" id="cptbrow2">
-    <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-            <a href="~/ComputerParts/PowerSupply">
-                <img src="..." alt="171x180">
-            </a>
-            <div class="caption">
-                <h4>Power Supply</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-            <a href="~/ComputerParts/Processors">
-                <img src="..." alt="171x180">
-            </a>
-            <div class="caption">
-                <h4>Processors</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-            <a href="~/ComputerParts/SoundCards">
-                <img src="..." alt="171x180">
-            </a>
-            <div class="caption">
-                <h4>Sound Cards</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-            <a href="~/ComputerParts/VideoCards">
-                <img src="..." alt="171x180">
-            </a>
-            <div class="caption">
-                <h4>Video Cards</h4>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+  var root = '@Url.Content("~/")';
+</script>
