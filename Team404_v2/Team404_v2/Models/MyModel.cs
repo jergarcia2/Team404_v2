@@ -24,8 +24,10 @@ namespace Team404_v2.Models
 
 		public virtual DbSet<Products> Products { get; set; }
 		public virtual DbSet<Bundles> Bundles { get; set; }
-		public virtual DbSet<Wishlist> Wishlist { get; set; }
-	}
+		public virtual DbSet<Wishlist> Wishlists { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+    }
 
 	//public class MyEntity
 	//{

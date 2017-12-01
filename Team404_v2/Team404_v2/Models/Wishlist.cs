@@ -13,22 +13,22 @@ namespace Team404_v2.Models
 	{
 
 		[Key]
-		public string Id { get; set; }
+		public int RecordId { get; set; }
+        public string WishlistId { get; set; }
+		public int ProductId  { get; set; }
 
-		[MaxLength(250)]
-		public string ItemNames { get; set; }
-		[MaxLength(250)]
+        [MaxLength(250)]
 		public string LinkRemove { get; set; }
-		[MaxLength(250)]
+
+        [MaxLength(250)]
 		public string Undo { get; set; }
-		[MaxLength(250)]
+
+        [MaxLength(250)]
 		public string ProductLink { get; set; }
 
-		public decimal? Prices1 { get; set; }
-		public decimal? Prices2 { get; set; }
-		public decimal? Prices3 {get; set;}
+        public int Count { get; set; }
+        public DateTime DateCreated { get; set; }
 
-        [Required]
-        public Products Product { get; set; }
+        public virtual Products Product { get; set; }
     }
 }

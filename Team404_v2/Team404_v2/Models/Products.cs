@@ -9,8 +9,7 @@ namespace Team404_v2.Models
     public class Products
     {
         [Key]
-        [Required]
-        public int Id { get; set; }
+        public int ProductId { get; set; }
 
         [Required]
         [MaxLength(250)]
@@ -81,10 +80,10 @@ namespace Team404_v2.Models
 
         [Required]
         [Display(Name = "Item 1$")]
-        public decimal? ItemPrice { get; set; }
+        public decimal ItemPrice { get; set; }
 
         [Display(Name = "Item 2$")]
-        public decimal? ItemPrice2 { get; set; }
+        public decimal ItemPrice2 { get; set; }
 
         [MaxLength(250)]
         [Display(Name = "Rm Details")]

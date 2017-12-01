@@ -16,15 +16,15 @@ namespace Team404_v2.Controllers
 
         public ActionResult WishList()
         {
-			var model = new WishlistVM();
-			var ctx = new MyModel();
-			foreach (var item in ctx.Wishlist)
-			{
-				model.Wishlist.Add(item);
-			}
+            //var model = new WishlistVM();
+            //var ctx = new MyModel();
+            //foreach (var item in ctx.Wishlist)
+            //{
+            //	model.Wishlist.Add(item);
+            //}
 
-			return View(model);
-		}
+            return View();
+        }
 
         public ActionResult Contact()
         {

@@ -23,6 +23,9 @@
             </ul>
 		
             <button type="button" id="Link">@cpcase.ItemLink</button>
+            <p class="button">
+                @Html.ActionLink("Add to Cart", "Index", "Wishlists", new { id = cpcase.ProductId }, "")
+            </p>
         </div>
     </div>
 
