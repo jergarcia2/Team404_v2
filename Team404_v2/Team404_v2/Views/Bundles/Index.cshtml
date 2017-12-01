@@ -2,6 +2,11 @@
 	ViewBag.PageTitle = "Bundles";
 	ViewBag.PageName = "Bundles";
 }
+
+@section css{
+    <link href="~/Content/BundleIndex.css" rel="stylesheet" type="text/css" />
+}
+
 <h2>@ViewData["Title"]</h2>
 
 <p>
@@ -12,6 +17,38 @@
 	contain a great assortment of parts that will fulfill your needs. 
 </p>
 
+<div class="row bndlrow1" id="bndlrow1">
+    <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+            <a href="~/Bundles/Beginner">
+                <img src="~/Content/images/bundleimages/Beginner/IntelCorei3.jpg" alt="171x180">
+            </a>
+            <div class="caption">
+                <h4>Beginner Bundles</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+            <a href="~/Bundles/MidGrade">
+                <img src="~/Content/images/bundleimages/MidGrade/IntelCorei7.jpg" alt="171x180">
+            </a>
+            <div class="caption">
+                <h4>Mid-Grade Bundles</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+            <a href="~/Bundles/Professional">
+                <img src="~/Content/images/bundleimages/Professional/IntelSkylakeCore.png" alt="171x180">
+            </a>
+            <div class="caption">
+                <h4>Professional Bundles</h4>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
   var root = '@Url.Content("~/")';
 </script>
