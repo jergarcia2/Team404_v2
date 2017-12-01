@@ -18,6 +18,7 @@ namespace Team404_v2.Controllers
         public ActionResult Cases()
         {
             var model = new ProductVM();
+
             var ctx = new MyModel();
             foreach (var item in ctx.Products)
             {

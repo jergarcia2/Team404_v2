@@ -7,119 +7,89 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Team404_v2.Models;
+using Team404_v2.ViewModels;
 
 namespace Team404_v2
 {
     public class WishlistsController : Controller
     {
-        private MyModel db = new MyModel();
+        private MyModel storeDB = new MyModel();
 
         // GET: Wishlists
         public ActionResult Index()
         {
-            return View(db.Wishlist.ToList());
+            var cart = ShoppingCart.GetCart(this.HttpContext);
+
+            // Set up our ViewModel
+            var viewModel = new ShoppingCartViewModel
+            {
+                WishlistItems = cart.GetCartItems(),
+                CartTotal = cart.GetTotal()
+            };
+            // Return the view
+            return View(viewModel);
         }
 
-        // GET: Wishlists/Details/5
-        public ActionResult Details(string id)
+        // GET: Wishlists/AddToWishlist/5
+        public ActionResult AddToWishlist(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Wishlist wishlist = db.Wishlist.Find(id);
-            if (wishlist == null)
-            {
-                return HttpNotFound();
-            }
-            return View(wishlist);
-        }
+            // Retrieve the album from the database
+            var addedProduct = storeDB.Products
+                .Single(product => product.ProductId == id);
 
-        // GET: Wishlists/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+            // Add it to the shopping cart
+            var wishlist = ShoppingCart.GetCart(this.HttpContext);
 
-        // POST: Wishlists/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,ItemNames,LinkRemove,Undo,ProductLink,Prices1,Prices2,Prices3")] Wishlist wishlist)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Wishlist.Add(wishlist);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            wishlist.AddToCart(addedProduct);
 
-            return View(wishlist);
-        }
-
-        // GET: Wishlists/Edit/5
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Wishlist wishlist = db.Wishlist.Find(id);
-            if (wishlist == null)
-            {
-                return HttpNotFound();
-            }
-            return View(wishlist);
-        }
-
-        // POST: Wishlists/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,ItemNames,LinkRemove,Undo,ProductLink,Prices1,Prices2,Prices3")] Wishlist wishlist)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(wishlist).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(wishlist);
-        }
-
-        // GET: Wishlists/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Wishlist wishlist = db.Wishlist.Find(id);
-            if (wishlist == null)
-            {
-                return HttpNotFound();
-            }
-            return View(wishlist);
-        }
-
-        // POST: Wishlists/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            Wishlist wishlist = db.Wishlist.Find(id);
-            db.Wishlist.Remove(wishlist);
-            db.SaveChanges();
+            // Go back to the main store page for more shopping
             return RedirectToAction("Index");
+        }
+
+        //
+        // AJAX: /Wishlist/RemoveFromList/5
+        [HttpPost]
+        public ActionResult RemoveFromList(int id)
+        {
+            // Remove the item from the cart
+            var wishlist = ShoppingCart.GetCart(this.HttpContext);
+
+            // Get the name of the album to display confirmation
+            string productName = storeDB.Wishlists
+                .Single(item => item.RecordId == id).Product.ItemTitle;
+
+            // Remove from cart
+            int itemCount = wishlist.RemoveFromCart(id);
+
+            // Display the confirmation message
+            var results = new ShoppingCartRemoveViewModel
+            {
+                Message = Server.HtmlEncode(productName) +
+                    " has been removed from your shopping cart.",
+                CartTotal = wishlist.GetTotal(),
+                CartCount = wishlist.GetCount(),
+                ItemCount = itemCount,
+                DeleteId = id
+            };
+            return Json(results);
+        }
+
+        //
+        // GET: /Wishlist/ListSummary
+        [ChildActionOnly]
+        public ActionResult ListSummary()
+        {
+            var wishlist = ShoppingCart.GetCart(this.HttpContext);
+
+            ViewData["CartCount"] = wishlist.GetCount();
+            return PartialView("CartSummary");
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                storeDB.Dispose();
             }
             base.Dispose(disposing);
         }
