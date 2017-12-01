@@ -29,18 +29,6 @@ namespace Team404_v2.Controllers
 
         public ActionResult CoolingSystems()
         {
-			//CoolingSystemsVM model = new CoolingSystemsVM();
-			//CPCoolingSystems Item1 = new CPCoolingSystems();
-			//Item1.ItemTitle = "Item 1 Title Goes Here";
-			//Item1.ItemLink = "View Item Details";
-			//Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//model.PCCoolingSystems.Add(Item1);
-
-			//return View(model);
 			var model = new ProductVM();
 			var ctx = new MyModel();
 			foreach (var item in ctx.Products)
@@ -62,34 +50,11 @@ namespace Team404_v2.Controllers
 				model.Products.Add(item);
 			}
 
-			
-			//MemoryVM model = new MemoryVM();
-			//CPMemory Item1 = new CPMemory();
-			//Item1.ItemTitle = "Item 1 Title Goes Here";
-			//Item1.ItemLink = "View Item Details";
-			//Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//model.MemoryItems.Add(Item1);
-
 			return View(model);
         }
 
         public ActionResult Motherboards()
         {
-			//MotherboardVM model = new MotherboardVM();
-			//CPMotherboard Item1 = new CPMotherboard();
-			//Item1.ItemTitle = "Item 1 Title Goes Here";
-			//Item1.ItemLink = "View Item Details";
-			//Item1.MiniDescription.Add("UPC:xxxxxxxxx");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//Item1.MiniDescription.Add("Bullet goes here");
-			//model.CPMotherboard.Add(Item1);
-
 			var model = new ProductVM();
 			var ctx = new MyModel();
 			foreach (var item in ctx.Products)
@@ -149,5 +114,19 @@ namespace Team404_v2.Controllers
 
 			return View(model);
 		}
+
+        public ActionResult Prods (string prodSearch, Products product)
+        {
+            MyModel db = new MyModel();
+
+            var products = db.Products.Where(x => x.Category.Contains(prodSearch));
+
+            if (ModelState.IsValid)
+            {
+                return View(products);
+            }
+
+            return View();
+        }
 	}
 }
