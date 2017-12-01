@@ -336,12 +336,6 @@
     <Content Include="Content\images\computerpartsimages\CoolingSystems\Cooler_Noctua\Coolerpic4.jpg" />
     <Content Include="Content\images\computerpartsimages\CoolingSystems\Cooler_Noctua\Coolerpic5.jpg" />
     <Content Include="Content\images\computerpartsimages\Item1image.png" />
-    <Content Include="Content\images\computerpartsimages\Memory\Memory_Corsair\memorypic1.png" />
-    <Content Include="Content\images\computerpartsimages\Memory\Memory_Corsair\Memorypic2.jpg" />
-    <Content Include="Content\images\computerpartsimages\Memory\Memory_Corsair\Memorypic3.jpg" />
-    <Content Include="Content\images\computerpartsimages\Memory\Memory_Crucial\memorypic4.jpg" />
-    <Content Include="Content\images\computerpartsimages\Memory\Memory_Crucial\memorypic5.jpg" />
-    <Content Include="Content\images\computerpartsimages\Memory\Memory_Crucial\memorypic6.png" />
     <Content Include="Content\images\computerpartsimages\Motherboards\AMD\Motherboard_Asrock\Motherboardpic1.jpg" />
     <Content Include="Content\images\computerpartsimages\Motherboards\AMD\Motherboard_Asrock\Motherboardpic2.jpg" />
     <Content Include="Content\images\computerpartsimages\Motherboards\AMD\Motherboard_Asrock\Motherboardpic3.jpg" />
@@ -535,6 +529,8 @@
     <Content Include="Scripts\jquery-3.2.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\images\computerpartsimages\Memory\Memory_Corsair\" />
+    <Folder Include="Content\images\computerpartsimages\Memory\Memory_Crucial\" />
     <Folder Include="Content\images\computerpartsimages\Memory\Memory_Kingston\" />
   </ItemGroup>
   <ItemGroup>
