@@ -4,7 +4,7 @@
 
 
 $(function () {
-	$("#Wishlist").click(function () {
+	$("#Link").click(function () {
 		$("#hidden").css("display", "block");
 	});
 	$("#Remove").click(function () {
