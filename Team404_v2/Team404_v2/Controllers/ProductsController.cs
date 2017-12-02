@@ -19,7 +19,7 @@ namespace Team404_v2.Controllers
         public ActionResult Index()
         {
             var products = db.Products.
-                Where(m => m.Category.StartsWith("A")).
+                Where(m => m.ItemTitle.StartsWith("A")).
                 OrderBy(m => m.Category);
 
             return View(db.Products.ToList());
