@@ -11,6 +11,7 @@
 	<environment include="Development">
 		<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 		<script src="~/Scripts/Details.js"></script><!-- Show/Hide Details on views-->
+        <link href="~Content/Site.css" type="text/css" rel="stylesheet"/>
 	</environment>
 
 </head>
@@ -106,7 +107,7 @@
     <div class="container body-content">
         <div class="row">
             <div class="col-md-12" id="titlebar">
-                <h1>@ViewBag.PageTitle</h1>
+                <h1>@ViewBag.PageName</h1>
             </div>
         </div>
         @RenderBody()

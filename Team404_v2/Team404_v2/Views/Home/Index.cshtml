@@ -32,12 +32,7 @@
            guaranteed to fulfil all their present and future needs.
        </p>
        
-           @{ 
-               if(User.IsInRole("Admin"))
-               {
-                 <p>Admin is logged in</p>
-               }
-           }
+           
        
    </div>
    <div class="col-sm-6 col-md-4">
@@ -93,3 +88,9 @@
         </div>
     </div>
 </div> <!-- End row -->
+@{
+    if (User.IsInRole("Admin"))
+    {
+        <p>Admin is logged in</p>
+    }
+}
