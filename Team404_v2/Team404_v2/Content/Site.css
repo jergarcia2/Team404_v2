@@ -56,12 +56,12 @@ textarea {
     padding: 10px;
 }
 
-#Remove {
+/*#Remove {
     background-color: grey;
     color: black;
     float: right;
     margin-top: -45px;
-}
+}*/
 
 /*#Link {
     background-color: grey;
@@ -90,6 +90,14 @@ textarea {
 
 .titlebar {
     text-align: center;
+}
+
+#itemslist {
+    border: 1px solid red;
+}
+
+.list-group-item {
+    border: 1px solid red;
 }
 
 /* Nav Bar adjustment */

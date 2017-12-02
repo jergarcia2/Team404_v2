@@ -1,4 +1,14 @@
-﻿
+﻿//$(function () {
+
+//    $('#contact_purpose').click(function () {
+//        if ($(this).val() == 'employment') {
+//            $('.employment_display').show(); //css("display", "block");
+//        }
+//        else {
+//            $('.employment_display').hide(); //css("display", "none");
+//        }
+//    });
+//});
 
 
 
@@ -8,7 +18,7 @@ $(function () {
 		$("#hidden").css("display", "block");
 	});
 	$("#Remove").click(function () {
-		$("#hidden").show("display", "none");
+		$("#hidden").css("display", "none");
 
 	});
 });

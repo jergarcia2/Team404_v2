@@ -79,7 +79,7 @@ namespace Team404_v2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,ItemTitle,MiniDescription,MiniDescription2,MiniDescription3,LongDescription1,LongDescription2,LongDescription3,ItemLink,Price1Name,Price1Link,Price2Name,Price2Link,Price3Name,Price3Link,ItemPrice,ItemPrice2,RemoveDetails,Category")] Products products)
+        public ActionResult Edit([Bind(Include = "ProductId,ItemTitle,MiniDescription,MiniDescription2,MiniDescription3,LongDescription1,LongDescription2,LongDescription3,ItemLink,Price1Name,Price1Link,Price2Name,Price2Link,Price3Name,Price3Link,ItemPrice,ItemPrice2,RemoveDetails,Category")] Products products)
         {
             if (ModelState.IsValid)
             {

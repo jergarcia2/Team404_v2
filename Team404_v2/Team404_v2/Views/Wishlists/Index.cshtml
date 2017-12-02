@@ -1,7 +1,7 @@
 ﻿@model Team404_v2.ViewModels.ShoppingCartViewModel
 
 @{
-    ViewBag.Title = "Wishlist";
+    ViewBag.PageTitle = "Wishlist";
 }
 
 <h2>Wishlist</h2>
@@ -56,7 +56,7 @@
             {
                 <tr id="row-@item.RecordId">
                     <td>
-                        @Html.ActionLink(item.Product.ItemTitle, "Details", "Store", new { id = item.ProductId }, null)
+                        @Html.ActionLink(item.Product.ItemTitle, "Details", "Products", new { id = item.ProductId }, null)
                     </td>
                     <td>
                         @item.Product.ItemPrice

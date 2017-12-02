@@ -21,23 +21,22 @@
 				<li>@cpcase.MiniDescription3</li>
             </ul>
 		
-            <button type="button" id="Link">@cpcase.ItemLink</button>
-            <p class="button">
-                @Html.ActionLink("Add to Cart", "Index", "Wishlists", new { id = cpcase.ProductId }, "")
-            </p>
+            <button type="button" class="btn btn-info" id="Link">@cpcase.ItemLink</button>
         </div>
     </div>
 
 	<div id="hidden">
-		<p><b>Feature Summary</b></p>
+		<h4><b>Product Summary</b></h4>
 		<div id="long">
 			<ul>	
 			    <li>@cpcase.LongDescription1</li>
 				<li>@cpcase.LongDescription2</li>
 				<li>@cpcase.LongDescription3</li>
 			</ul>
-			<button type="button" id="Wishlist">@cpcase.Wishlist</button>
-			<button type="button" id="Remove">@cpcase.RemoveDetails</button>
+            <p class="button">
+                @Html.ActionLink("Add to Cart", "AddToWishlist", "Wishlists", new { id = cpcase.ProductId }, "")
+            </p>
+			<button type="button" class="btn btn-info" id="Remove">@cpcase.RemoveDetails</button>
 		</div>
 		<table id="pricetable">
 			<tr>

@@ -1,7 +1,7 @@
 ﻿@model Team404_v2.Models.Products
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.PageTitle = "Edit";
 }
 
 <h2>Edit</h2>
@@ -15,7 +15,7 @@
         <h4>Products</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.ProductId)
 
         <div class="form-group">
             @Html.LabelFor(model => model.ItemTitle, htmlAttributes: new { @class = "control-label col-md-2" })
